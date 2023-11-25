@@ -1,0 +1,92 @@
+{
+  "startmenu": ["Điền câu trả lời", "Thêm hình ảnhp", "Xem Kết quả"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 8,
+        "questions": [
+          {
+            "question": "Bạn đã từng được nhắc nhở\nnói nhỏ lại hoặc giảm âm lượng chuông điện thoại di động\ncủa bạn ở nơi công cộng chưa?",
+            "answers": ["Có", "Không"]
+          },
+          {
+            "question": "Bạn có gặp khó khăn\nkhi giao tiếp trong\nmôi trường bên ngoài không?",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Ít hoặc không"]
+          },
+          {
+            "question": "Bạn có sử dụng\nmáy trợ thính không?",
+            "answers": [
+              "Có, hiện tôi đang sử dụng máy trợ thính",
+              "Có, nhưng hiện tại tôi không còn sử dụng máy trợ thính",
+              "Không, tôi chưa từng sử dụng máy trợ thính"
+            ]
+          },
+          {
+            "question": "Bạn có đang sử dụng thuốc\nảnh hưởng đến thính giác\nhoặc thăng bằng không?",
+            "answers": ["Có", "Không"]
+          },
+          {
+            "question": "Bạn đã từng bị\nngã hoặc bị hoa mắt,\nchóng mặt hoặc mất thăng bằng?",
+            "answers": [
+              "Có, trong vòng một năm gần đây",
+              "Có, nhưng 1 năm trở lại đây thì không",
+              "Không, tôi chưa từng bị các triệu chứng trên"
+            ]
+          },
+          {
+            "question": "Bạn có phải tiếp xúc\nvới tiếng ồn lớn?(ví dụ: tiếng ồn công việc, hoạt động công xưởng)",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Ít hoặc không"]
+          },
+          {
+            "question": "Bạn đã từng bị đau tai\nchảy mủ tai hoặc\nbị viêm tai?",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Ít hoặc không"]
+          },
+          {
+            "question": "Bạn đã từng thực hiện\nphẫu thuật tai chưa?",
+            "answers": ["Có", "Không"]
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "Bạn muốn kiểm tra tai bên nào?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "Thêm hình ảnh",
+            "subtitle": "Vui lòng gửi hình ảnh màng nhĩ.\nBạn có thể đính kèm tối đa 5 ảnh."
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

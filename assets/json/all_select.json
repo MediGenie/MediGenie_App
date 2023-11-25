@@ -1,0 +1,5 @@
+{
+  "teenager": "https://medigenie-questionnaires.s3.ap-northeast-2.amazonaws.com/otolaryngology/ear/all_teenager.json",
+  "adult": "https://medigenie-questionnaires.s3.ap-northeast-2.amazonaws.com/otolaryngology/ear/all_adult.json",
+  "senior": "https://medigenie-questionnaires.s3.ap-northeast-2.amazonaws.com/otolaryngology/ear/all_senior.json"
+}

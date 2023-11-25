@@ -1,0 +1,129 @@
+{
+  "startmenu": ["Answer few questions", "See your results"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 11,
+        "questions": [
+          {
+            "question": "What is your child's temperature?",
+            "answers": ["36.0~37.1", "37.2~38.0", "38.1~39.0", "39.1~"]
+          },
+          {
+            "question": "How many hours does your child sleep in a 24 hour period (including naps)?",
+            "answers": [
+              "8-10 hours",
+              "Less than 8 hours",
+              "10-12 hours",
+              "More than 12 hours"
+            ]
+          },
+          {
+            "question": "How would you describe your child's general behavior?",
+            "answers": [
+              "Mostly calm and content",
+              "Often active, but manageable",
+              "Frequently restless or overactive",
+              "Frequently upset, irritable, or hard to soothe"
+            ]
+          },
+          {
+            "question": "How does your child respond to instructions or their name being called?",
+            "answers": [
+              "Responds and follows instructions consistently",
+              "Often responds, but not consistently",
+              "Rarely responds or follows instructions",
+              "Doesn't respond or follow instructions at all"
+            ]
+          },
+          {
+            "question": "Does your child seem to hear and understand what is said to them?",
+            "answers": [
+              "Yes, always",
+              "Yes, most of the time",
+              "Sometimes",
+              "Rarely or never"
+            ]
+          },
+          {
+            "question": "Does your child appear to see objects and people clearly at different distances?",
+            "answers": [
+              "Yes, always",
+              "Yes, most of the time",
+              "Sometimes",
+              "Rarely or never"
+            ]
+          },
+          {
+            "question": "Does your child avoid bright lights or squint often?",
+            "answers": [
+              "Yes, always",
+              "Yes, most of the time",
+              "Sometimes",
+              "Rarely or never"
+            ]
+          },
+          {
+            "question": "What type of diet does your child have?",
+            "answers": [
+              "Balanced diet with fruits, vegetables, grains, proteins",
+              "Mostly processed food and grains",
+              "Predominantly vegetarian/vegan diet",
+              "Special diet due to medical needs"
+            ]
+          },
+          {
+            "question": "How often does your child eat in a day?",
+            "answers": [
+              "3 meals with no snacks",
+              "3 meals with 1-2 snacks",
+              "3 meals with 3 or more snacks",
+              "Irregular meals and snacks"
+            ]
+          },
+          {
+            "question": "Is your child currently on any prescribed medication?",
+            "answers": [
+              "No medication",
+              "Yes, regular prescribed medication",
+              "Yes, occasional prescribed medication",
+              "Over-the-counter medication only"
+            ]
+          },
+          {
+            "question": "Does your infant have any known allergies?",
+            "answers": [
+              "No known allergies or Not sure",
+              "Yes, to food",
+              "Yes, to medication",
+              "Yes, to environmental factors"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 2,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

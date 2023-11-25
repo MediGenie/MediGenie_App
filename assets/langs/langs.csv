@@ -1,0 +1,109 @@
+str,en_US,ko_KR,vi_VN
+app_ear_problem,Having trouble\nwith your ears?,귀가\n불편한가요?,Tai của bạn đang có vấn đề?
+app_today_feeling,How are you\nfeeling today?,오늘 하루는\n어떤가요?,Hôm nay bạn cảm thấy như thế nào?
+app_home,Home,홈,Trang chủ
+app_diagnosis,Diagnosis,진단,Chẩn đoán
+app_my,My,마이,Của tôi
+app_coming_title,Coming soon,준비중이에요.,Sắp ra mắt
+app_coming_dec,We're working on something\nthat we hope will help you.\nSee you soon!,현재 개발 진행 중이에요.\n조금만 기다려주세요.,Chúng tôi đang nghiên cứu tính năng mới và hy vọng sẽ giúp ích cho bạn.\nHẹn sớm gặp lại!
+app_okey,Okay,확인,Đồng ý 
+app_skin_trouble,Having trouble\nwith your skin?,피부에\n문제가 있나요?,Da của bạn đang gặp vấn đề?
+app_minute,min,분,phút
+app_child_trouble,Is your child\nhaving trouble?,아이가\n아픈가요?,Con của bạn đang gặp vấn đề?
+app_mind_care,Let's take care\nof my mind.,내 마음을\n살펴보아요.,Hãy khiến bản thân yên tâm hơn.
+app_onboarding_title_1,Welcome to MediGenie,메디지니에 오신 것을 환영해요.,Chào mừng đến với Medigene.
+app_onboarding_dec_1,A safe place to store your medical data\nand receive personalized recommendations\nbased on AI-powered analysis.,의료 데이터를 안전하게 저장하고\nAI 기반 분석을 통해서 개인화된 추천을 받을 수 있는 어플입니다.,Ứng dụng có khả năng lưu trữ thông tin y tế một cách an toàn\nđưa ra đề xuất được cá nhân hóa bằng phân tích của AI.
+app_onboarding_title_2,Empowering your health decisions,건강 관련 의사 결정에 힘을 실어줄게요.,Bạn được trao quyền để tự bảo vệ sức khỏe của bản thân
+app_onboarding_dec_2,We empower you with the informationyou need to make informed decisionsand take control of your health.,정보에 입각한 결정을 내리고\n건강을 관리하는 데 필요한 정보를 제공합니다.,Phần mềm sẽ cung cấp thông tin thiết thực\ngiúp bạn đưa ra quyết định sáng suốt về sức khỏe.
+app_consult_dec,What do you\nwant to consult?,무엇을\n상담하고 싶나요?,Vấn đề bạn cần được tư vấn?
+app_choose_than,You can choose more than one.,두 개 이상 선택할 수 있습니다.,Bạn có thể chọn nhiều lựa chọn.
+app_get_started,Get Started,시작하기,Bắt đầu
+app_health_state,Health state,건강 상태,Tình trạng sức khỏe
+app_health_management,Health management,건강관리,Chăm sóc sức khỏe
+app_health_checkup,Health checkup\nrecords and data,건강검진 기록 및 데이터,Hồ sơ và dữ liệu\nvề kết quả thăm khám
+app_health_info,Health Info &\nRecommendations,건강 정보 및 권장 사항,Thông tin và khuyến cáo
+app_terms_agree_dec,Please agree to\nthe terms and conditions\nto use our service.,서비스 이용 약관에\n동의해 주시기 바랍니다.,Vui lòng đồng ý\nvới Điều khoản để sử dụng dịch vụ.
+app_agree_below,Agree to everything below,아래의 모든 사항에 동의합니다,Tôi đồng ý với tất cả những điều dưới đây
+app_14_years_re,(Required) 14 years of age or older,(필수) 만14세 이상,(Bắt buộc) trên 14 tuổi
+app_terms_service_re,(Required) Terms of service,(필수) 서비스 약관,(Bắt buộc) Điều khoản dịch vụ
+app_privacy_policy_re,(Required) Privacy policy,(필수) 개인 정보 보호 정책,(Bắt buộc) Chính sách bảo mật
+app_agree,Agree,동의합니다,Tôi đồng ý
+app_about_you,About you,당신에 대해\n알려주세요.,Thông tin của bạn
+app_medications,Medications,약물,Thuốc và đơn thuốc
+app_usual_treatment,Usual treatment,보통 치료 방법,Tiền sử điều trị của bạn
+app_it_serious,Is it serious?,심각한가요?,Triệu chứng có nặng nề?
+app_what_it_is,What it is,어떤 증상인가요?,Bạn đang gặp triệu chứng gì?
+app_powerd_yonsei,Powered by AI Technology Developed at Yonsei School of Medicine,연세대 의과대학에서 개발된 인공지능 기술을 사용합니다,Sử dụng Trí tuệ nhân tạo được phát triển bởi Đại học Y Khoa Yonsei.
+app_healthy,Healthy,건강,Sức khỏe tốt
+app_caution,Caution,주의,Lưu ý
+app_serious,Serious,심각,Nặng nề
+app_audiogram,‍Audiogram,오디오그램,Đo thính lực
+app_ask_ai,Ask an AI Doctor,AI 의사에게 물어보세요,Hỏi Bác sĩ AI
+app_find_symptoms,Find possible\ncauses of symptoms,증상의 원인을\n찾아봐요,Tìm các nguyên nhân có thể\ngây ra triệu chứng
+app_ear,Ear,귀,Tai
+app_skin,Skin,피부,Da Liễu
+app_child,Child,소아,Nhi
+app_mind,Mind,정신,Tâm lý
+app_ear_all_test,Ear + Hearing Test,귀 종합 검사,Khám Tai và Thính lực
+app_eardrum_test,Ear Test,고막 검사,Khám Màng Nhĩ
+app_hearing_test,Hearing Test,청력 검사,Khám Thính Lực
+app_skin_all_test,Skin Test,피부 종합 검사,Khám Da liễu
+app_skin_photo_test,Photo,피부 이미지 검사,Hình Ảnh
+app_child_test,Child,소아 검사,Nhi
+app_cogmap_test,CogMap,마음 탐험,CogMap
+app_webrain_test,WeBrain,마음 훈련,WeBrain
+app_how_it_work,How it works,어떻게 진행되나요?,Cách phần mềm hoạt động
+app_fill_questionnaire,Fill out the questionnaire,질문에 답해주세요.,Điền câu trả lời
+app_add_photo,Add photos,사진을 추가하세요.,Thêm hình ảnh
+app_check_hearing_dec,Check hearing with earphones,이어폰으로 청력을 검사하세요.,Kiểm tra thính lực bằng tai nghe
+app_see_result,See your results,결과를 확인하세요.,Xem Kết quả
+app_optional_param,Add optional parameters,선택적 변수 추가하기,Thay đổi đơn vị đo lường
+app_start,Start,시작,Bắt đầu
+app_right,Right,오른쪽,Phải
+app_left,Left,왼쪽,bên trái
+app_member_select_dec,Select the member\nyou want to test.,검사를 진행할 대상을\n선택해주세요.,Chọn cơ quan cần kiểm tra.
+app_continue,Continue,다음,Tiếp tục
+app_questionnaire,Questionnaire,문진표,Bảng câu hỏi
+app_ear_select_dec,Which ear\ndo you want to test?,어느쪽 귀를\n검사하고 싶나요?,Bạn muốn kiểm tra tai bên nào?
+app_eardrum_photo_dec,Please attach photos of your eardrum.\nYou can attach up to 5 photos.,고막 사진을 첨부해주세요.\n사진은 최대 5장까지 첨부할 수 있어요.,Vui lòng gửi hình ảnh màng nhĩ.\nBạn có thể đính kèm tối đa 5 ảnh.
+app_test_stop_title,Do you want\nto stop testing?,검사를\n중단할까요?,Bạn muốn dừng khám?
+app_test_stop_dec,"If you stop testing, your progress\nto date will not be saved and\nyou will have to start over.",검사를 중단하면\n진행 내용이 저장되지 않으며\n처음부터 다시 시작해요.,"Nếu bạn ngừng quét, quá trình sẽ không được lưu lại\nbạn sẽ phải bắt đầu lại ở lần sau."
+app_leave,Leave,나가기,Dừng
+app_ear_nose_throat,"Ear, Nose, and Throat",이비인후과,Tai mũi và họng
+app_pediatrics,Pediatrics,소아과,Nhi khoa
+app_male,Male,남,Nam giới
+app_female,Female,여,Nữ giới
+app_all,All,전체,Tất cả
+app_child,Child,자녀,Trẻ em
+app_no_data,"You don't have a diagnosis,\ncheck your health status after a diagnosis.","진단 기록이 없습니다.\n진단 후, 당신의 건강 상태를 확인해보세요.","Không có hồ sơ chẩn đoán.\nSau khi được chẩn đoán, hãy kiểm tra tình trạng sức khỏe của bạn."
+app_gender,Gender,성,Giới tính
+app_terms_service,Terms of service,서비스 이용 약관,Điều khoản dịch vụ
+app_privacy_policy,Privacy policy,개인 정보 처리 방침,Chính sách bảo mật
+app_add_child,Add child,자녀 추가,Thêm thông tin cho con
+app_delete_account,Delete account,계정 삭제,Xóa tài khoản
+app_signout,Sign out,로그아웃,Đăng xuất
+app_signin,Sign in,로그인,Đăng nhập
+app_delete_account_title,Do you want to\ndelete account?,계정을\n삭제할까요?,Bạn có muốn\nxóa tài khoản?
+app_delete_account_dec,"If you would like to delete  your account, please contact us at the address info@aiplaza.kr",계정 삭제를 원하시면 info@aiplaza.kr로 연락주시기 바랍니다.,"Nếu bạn muốn xóa tài khoản của mình, vui lòng liên hệ với chúng tôi theo địa chỉ info@aiplaza.kr"
+app_confirm,Confirm,확인,Xác nhận
+app_signout_title,Do you want to sign out?,로그아웃할까요?,Bạn có muốn đăng xuất?
+app_signout_dec,Diagnostic history is not available\nwhen you sign out.,로그아웃하면\n진단 기록을 볼 수 없어요.,Bạn sẽ không xem được lịch sử chuẩn đoán khi đã đăng xuất
+app_back,Back,돌아가기,Hủy
+app_child_name_dec,What is your\nchild\'s full name?,자녀의 이름을\n입력해주세요.,Vui lòng nhập tên con bạn.
+app_information_input,"For more accurate results,\nplease check the following information.",보다 정확한 결과를 위해\n정보를 확인해주세요.,Để có kết quả chính xác hơn\nVui lòng kiểm tra các thông tin sau.
+app_john,John,홍,VD: Trần
+app_first_name,First name,이름,Họ
+app_doe,Doe,길동,VD: Văn A.
+app_last_name,Last name,성,Tên
+app_valid_name,Please enter a valid name.,올바른 이름을 입력해 주세요.,Xin vui lòng nhập tên.
+app_what_gender,What is\nyour gender?,당신의 성별은\n무엇인가요?,Giới tính
+app_how_old_dec,How old are you?,나이를 입력해주세요.,Tuổi
+app_child_enrolled,Your child is enrolled.,자녀가 등록되었어요.,Thông tin về trẻ đã được đăng ký thành công.
+app_manage_health_dec,A smarter way to manage\nyour health with MediGenie,메디지니와 함께 똑똑하게\n당신의 건강을 관리하세요,Kiểm soát sức khỏe của bạn một cách thông minh hơn với MediGenie
+app_continue_google,Continue with Google,구글로 계속하기,Tải về bằng GooglePlay
+app_continue_apple,Continue with Apple,애플로 계속하기,Tải về bằng AppleStore
+app_result_insight,MediGenie's Insight,메디지니 인사이트,Đối tượng khách hàng của MediGenie
+app_result_advised,Please be advised,주의사항,Lưu ý rằng
+app_result_advised_dec,"The information provided by this medical AI application, including all health-related information, are for informational purposes only and are not intended, nor should they be interpreted, as a diagnosis or treatment plan. The medical AI application is not a substitute for professional medical advice, diagnosis, or treatment. It does not have the capacity to understand or interpret your individual health condition or specific medical needs. No doctor-patient relationship is created by your use of the medical AI application.","모든 건강 관련 정보를 포함하여 이 의료 AI 애플리케이션에서 제공하는 정보는 정보 제공의 목적일 뿐이며 진단 또는 치료 계획으로 의도되거나 해석되어서는 안 됩니다. 의료 AI 애플리케이션은 전문적인 의료 조언, 진단 또는 치료를 대신할 수 없습니다. 개인의 건강 상태나 특정 의학적 필요를 이해하거나 해석할 수 있는 능력이 없습니다. 의료 AI 응용 프로그램을 사용하여 의사-환자 관계가 생성되지 않습니다.","Bất cứ thông tin nào được cung cấp bởi AI y tế, bao gồm cả thông tin liên quan đến sức khỏe, chỉ mang mục đích tham khảo và không được sử dụng như một tiêu chuẩn chuẩn đoán và điều trị. Ứng dụng này không có khả năng thay thế tư vấn, chuẩn đoán và điều trị của các nhân viên y tế. Ứng dụng này không thể hiểu và diễn giải một cách cụ thể cho nhu cầu y tế của bạn. Và không có mối quan hệ bác sĩ - bệnh nhân khi sử dụng ứng dụng. "
+app_done,Done,완료,Hoàn thành
+app_skip,Skip,건너뛰기,nhảy

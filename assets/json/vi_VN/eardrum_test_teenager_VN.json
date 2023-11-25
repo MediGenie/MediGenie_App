@@ -1,0 +1,104 @@
+{
+  "startmenu": ["Điền câu trả lời", "Thêm hình ảnhp", "Xem Kết quả"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 9,
+        "questions": [
+          {
+            "question": "Thính giác của bạn\ncó sự thay đổi?",
+            "answers": [
+              "Có sự thay đổi đáng kể",
+              "Có sự thay đổi nhẹ",
+              "Không, thính giác của tôi ổn định"
+            ]
+          },
+          {
+            "question": "Bạn có sử dụng\ntai nghe thường xuyên không?",
+            "answers": [
+              "Có, hơn 2 giờ mỗi ngày",
+              "Có, dưới 2 giờ mỗi ngày",
+              "Không, tôi rất ít sử dụng tai nghe"
+            ]
+          },
+          {
+            "question": "Bạn đã từng tham gia sự kiện âm nhạc với âm thanh lớn?",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Không, chưa từng"]
+          },
+          {
+            "question": "Bạn có từng tiếp xúc với tiếng ồn lớn mà không có biện pháp bảo vệ?(ví dụ: pháo hoa, súng, công cụ điện)",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Không, chưa từng"]
+          },
+          {
+            "question": "Bạn đã từng bị ù tai, nghe thấy tiếng vo vo hoặc tiếng ồn lạ từ tai?",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Không, chưa từng"]
+          },
+          {
+            "question": "Bạn đã từng bị viêm tai\nhoặc gặp phải các vấn đề liên quan đến tai trong năm vừa qua?",
+            "answers": [
+              "Có, thường xuyên",
+              "Đôi khi",
+              "Không, tôi không gặp các vấn đề trên"
+            ]
+          },
+          {
+            "question": "Bạn đã từng tự làm sạch tai\nbằng bông tăm hoặc vật dụng khác?",
+            "answers": [
+              "Có, thường xuyên",
+              "Đôi khi",
+              "Không, tôi không sử dụng"
+            ]
+          },
+          {
+            "question": "Bạn có đang dùng thuốc có thể ảnh hưởng\nđến thính giác hoặc\nthăng bằng không?",
+            "answers": ["Có", "Không"]
+          },
+          {
+            "question": "Bạn đã từng được\nkhám thính giác trước đây chưa?",
+            "answers": ["Có", "Không"]
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "Bạn muốn kiểm tra tai bên nào?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "Thêm hình ảnh",
+            "subtitle": "Vui lòng gửi hình ảnh màng nhĩ.\nBạn có thể đính kèm tối đa 5 ảnh."
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

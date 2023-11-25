@@ -1,0 +1,252 @@
+{
+  "startmenu": [
+    "Điền câu trả lời",
+    "Kiểm tra thính lực bằng tai nghe",
+    "Xem Kết quả"
+  ],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 9,
+        "questions": [
+          {
+            "question": "Bạn có mắc phải\ncác triệu chứng sau không?",
+            "answers": [
+              "Không có triệu chứng trên",
+              "Nghe kém hoặc giảm thính lực",
+              "Ù tai",
+              "Đau hoặc khó chịu trong tai"
+            ],
+            "reduplication": true,
+            "subtitle": "Có thể chọn nhiều mục phù hợp"
+          },
+          {
+            "question": "Bạn thường xuyên sử dụng\nthiết bị nào sau đây?",
+            "answers": [
+              "Không sử dụng thiết bị nào ở trên",
+              "Tai nghe/tai nghe",
+              "máy trợ thính",
+              "nút bịt tai"
+            ],
+            "reduplication": true,
+            "subtitle": "Chọn tất cả các thiết bị mà bạn đang sử dụng"
+          },
+          {
+            "question": "Bạn đã từng tiếp xúc với\ntiếng ồn nghề nghiệp hoặc\ntiếng ồngiải trí nào sau đây chưa?",
+            "answers": [
+              "Không có điều nào ở trên",
+              "Công trường",
+              "Một buổi hòa nhạc hoặc địa điểm lớn",
+              "Máy móc hoặc thiết bị ồn ào"
+            ],
+            "reduplication": true,
+            "subtitle": "Có thể chọn nhiều mục phù hợp"
+          },
+          {
+            "question": "Bạn đã từng được chẩn đoán hoặc điều trị\ncho các tình trạng nào sau đây?",
+            "answers": [
+              "Không có điều nào ở trên",
+              "Viêm tai giữa",
+              "Ù tai",
+              "Thủng màng nhĩ"
+            ],
+            "reduplication": true,
+            "subtitle": "Có thể chọn nhiều mục phù hợp"
+          },
+          {
+            "question": "Bạn hiện đang hoặc đã từng mắc các bệnh nào sau đây?",
+            "answers": [
+              "Không có bệnh mạn tính trên",
+              "Tăng huyết áp",
+              "Tiểu đường",
+              "Bệnh lý tuyến giáp"
+            ],
+            "reduplication": true,
+            "subtitle": "Có thể chọn nhiều mục phù hợp"
+          },
+          {
+            "question": "Các tiểu phẫu hoặc\nphẫu thuật đã thực hiện",
+            "answers": [
+              "Chưa thực hiện các phẫu thuật kể trên",
+              "Phẫu thuật tai",
+              "Cấy ốc tai",
+              "Cấy tai giữa"
+            ],
+            "reduplication": true,
+            "subtitle": "Có thể chọn nhiều mục phù hợp"
+          },
+          {
+            "question": "Hiện tại, bạn có đang\ndùng thuốc gì không?",
+            "answers": [
+              "Không sử dụng các thuốc kể trên",
+              "Kháng sinh",
+              "Lợi tiểu",
+              "Aspirin hoặc thuốc chống đông"
+            ],
+            "reduplication": true,
+            "subtitle": "Có thể chọn nhiều mục phù hợp"
+          },
+          {
+            "question": "Bạn có bị thay đổi thính giác\nmột cách đột ngột hoặc nặng nề?",
+            "answers": ["Có", "Không"]
+          },
+          {
+            "question": "Bạn đã từng được khám thính giác\nhoặc khám bệnh bất kì?",
+            "answers": ["Có", "Không"]
+          }
+        ]
+      }
+    ],
+    "hearingtest": [
+      {
+        "index": 2,
+        "title": "Hearing",
+        "category": "ear",
+        "hearingProgress": [
+          {
+            "question": "Bắt đầu kiểm tra thính lực.\nHãy kết nối tai nghe.",
+            "progressType": "text"
+          },
+          {
+            "question": ".Kiểm tra tai phải.",
+            "subtitle": "Điều chỉnh âm lượng ở mức mà bạn có thể nghe và hiểu được giọng nói",
+            "progressType": "right",
+            "stepcount": 7,
+            "audioProgress": [
+              {
+                "frequency": 200,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 5000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 8000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "Hoàn thành!",
+            "subtitle": "Kiểm tra tai còn lại.",
+            "progressType": "text"
+          },
+          {
+            "question": "Kiểm tra tai trái.",
+            "subtitle": "Điều chỉnh âm lượng ở mức mà bạn có thể nghe và hiểu được giọng nói",
+            "progressType": "left",
+            "stepcount": 7,
+            "audioProgress": [
+              {
+                "frequency": 200,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 5000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 8000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "Làm tốt lắm!",
+            "subtitle": "Đang xử lý kết quả.",
+            "progressType": "text"
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+          {
+            "key": "audiogram",
+            "background": "container",
+            "type": "graph",
+            "title": "📈 Audiogram"
+          },
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

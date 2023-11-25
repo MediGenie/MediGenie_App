@@ -1,0 +1,201 @@
+{
+  "startmenu": [
+    "Answer few questions",
+    "Add photo",
+    "Check hearing with earphones",
+    "See your results"
+  ],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 9,
+        "questions": [
+          {
+            "question": "Is there a change in hearing?",
+            "answers": [
+              "Yes, significant change",
+              "Yes, a little change",
+              "No, my hearing is stable"
+            ]
+          },
+          {
+            "question": "Do you often listen to music with headphones or earphones?",
+            "answers": [
+              "Yes, more than 2 hours a day",
+              "Yes, less than 2 hours a day",
+              "No, I rarely use headphones or earphones"
+            ]
+          },
+          {
+            "question": "Have you ever attended a concert or a music event with loud music?",
+            "answers": ["Yes, often", "Sometimes", "No, never"]
+          },
+          {
+            "question": "Have you ever been exposed to loud noises (e.g. fireworks, firearms, power tools) without hearing protection?",
+            "answers": ["Yes, often", "Sometimes", "No, never"]
+          },
+          {
+            "question": "Have you ever had tinnitus, buzzing or any other noise from your ears?",
+            "answers": ["Yes, often", "Sometimes", "No, never"]
+          },
+          {
+            "question": "Have you had any ear infections or ear-related issues in the past year?",
+            "answers": [
+              "Yes, often",
+              "Sometimes",
+              "No, I didn't have a problem with my ears"
+            ]
+          },
+          {
+            "question": "Have you ever cleaned your ears using a cotton swab or something?",
+            "answers": [
+              "Yes, often",
+              "Sometimes",
+              "No, I didn't have a problem with my ears"
+            ]
+          },
+          {
+            "question": "Are you currently on medication that can affect your hearing or balance?",
+            "answers": ["Yes", "No"]
+          },
+          {
+            "question": "Have you ever had a hearing test or a test before?",
+            "answers": ["Yes", "No"]
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "Which ear do you test?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "Add photo.",
+            "subtitle": "Please attach a photo of your eardrum.\nYou can attach up to 5 photos."
+          }
+        ]
+      }
+    ],
+    "hearingtest": [
+      {
+        "index": 3,
+        "title": "Hearing",
+        "category": "ear",
+        "hearingProgress": [
+          {
+            "question": "Conduct a hearing test.\nConnect earphones\nor headphones to the device.",
+            "progressType": "text"
+          },
+          {
+            "question": "Test the right ear.",
+            "subtitle": "When you hear a beep,\npress the button.",
+            "progressType": "right",
+            "stepcount": 4,
+            "audioProgress": [
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "It's great.",
+            "subtitle": "Now test the other ear.",
+            "progressType": "text"
+          },
+          {
+            "question": "Test the left ear.",
+            "subtitle": "When you hear a beep,\npress the button.",
+            "progressType": "left",
+            "stepcount": 4,
+            "audioProgress": [
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "Good job!",
+            "subtitle": "Processing results.",
+            "progressType": "text"
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 4,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+          {
+            "key": "audiogram",
+            "background": "container",
+            "type": "graph",
+            "title": "📈 Audiogram"
+          },
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

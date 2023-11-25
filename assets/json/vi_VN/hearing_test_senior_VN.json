@@ -1,0 +1,207 @@
+{
+  "startmenu": [
+    "Điền câu trả lời",
+    "Kiểm tra thính lực bằng tai nghe",
+    "Xem Kết quả"
+  ],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 8,
+        "questions": [
+          {
+            "question": "Bạn đã từng được nhắc nhở\nnói nhỏ lại hoặc giảm âm lượng chuông điện thoại di động\ncủa bạn ở nơi công cộng chưa?",
+            "answers": ["Có", "Không"]
+          },
+          {
+            "question": "Bạn có gặp khó khăn\nkhi giao tiếp trong\nmôi trường bên ngoài không?",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Ít hoặc không"]
+          },
+          {
+            "question": "Bạn có sử dụng\nmáy trợ thính không?",
+            "answers": [
+              "Có, hiện tôi đang sử dụng máy trợ thính",
+              "Có, nhưng hiện tại tôi không còn sử dụng máy trợ thính",
+              "Không, tôi chưa từng sử dụng máy trợ thính"
+            ]
+          },
+          {
+            "question": "Bạn có đang sử dụng thuốc\nảnh hưởng đến thính giác\nhoặc thăng bằng không?",
+            "answers": ["Có", "Không"]
+          },
+          {
+            "question": "Bạn đã từng bị\nngã hoặc bị hoa mắt,\nchóng mặt hoặc mất thăng bằng?",
+            "answers": [
+              "Có, trong vòng một năm gần đây",
+              "Có, nhưng 1 năm trở lại đây thì không",
+              "Không, tôi chưa từng bị các triệu chứng trên"
+            ]
+          },
+          {
+            "question": "Bạn có phải tiếp xúc\nvới tiếng ồn lớn?(ví dụ: tiếng ồn công việc, hoạt động công xưởng)",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Ít hoặc không"]
+          },
+          {
+            "question": "Bạn đã từng bị đau tai\nchảy mủ tai hoặc\nbị viêm tai?",
+            "answers": ["Có, thường xuyên", "Đôi khi", "Ít hoặc không"]
+          },
+          {
+            "question": "Bạn đã từng thực hiện\nphẫu thuật tai chưa?",
+            "answers": ["Có", "Không"]
+          }
+        ]
+      }
+    ],
+    "hearingtest": [
+      {
+        "index": 2,
+        "title": "Hearing",
+        "category": "ear",
+        "hearingProgress": [
+          {
+            "question": "Bắt đầu kiểm tra thính lực.\nHãy kết nối tai nghe.",
+            "progressType": "text"
+          },
+          {
+            "question": ".Kiểm tra tai phải.",
+            "subtitle": "Điều chỉnh âm lượng ở mức mà bạn có thể nghe và hiểu được giọng nói",
+            "progressType": "right",
+            "stepcount": 7,
+            "audioProgress": [
+              {
+                "frequency": 200,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 5000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 8000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "Hoàn thành!",
+            "subtitle": "Kiểm tra tai còn lại.",
+            "progressType": "text"
+          },
+          {
+            "question": "Kiểm tra tai trái.",
+            "subtitle": "Điều chỉnh âm lượng ở mức mà bạn có thể nghe và hiểu được giọng nói",
+            "progressType": "left",
+            "stepcount": 7,
+            "audioProgress": [
+              {
+                "frequency": 200,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 5000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 8000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "Làm tốt lắm!",
+            "subtitle": "Đang xử lý kết quả.",
+            "progressType": "text"
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+          {
+            "key": "audiogram",
+            "background": "container",
+            "type": "graph",
+            "title": "📈 Audiogram"
+          },
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

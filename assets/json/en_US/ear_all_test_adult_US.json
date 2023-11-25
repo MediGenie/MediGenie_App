@@ -1,0 +1,235 @@
+{
+  "startmenu": [
+    "Answer few questions",
+    "Add photo",
+    "Check hearing with earphones",
+    "See your results"
+  ],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 9,
+        "questions": [
+          {
+            "question": "Have you experienced any of the following symptoms",
+            "answers": [
+              "None of the above",
+              "Hearing loss or hearing loss",
+              "Tinnitus",
+              "Pain or discomfort in the ear"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all that apply"
+          },
+          {
+            "question": "Which of the following devices do you use regularly?",
+            "answers": [
+              "None of the above",
+              "Headphones/earphones",
+              "Hearing aid",
+              "Earplugs"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all applicable devices"
+          },
+          {
+            "question": "Have you ever been exposed to any of the following occupational or recreational noise sources?",
+            "answers": [
+              "None of the above",
+              "Construction site",
+              "A loud music concert or place",
+              "Noisy machinery or equipment"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all that apply"
+          },
+          {
+            "question": "Have you ever been diagnosed or treated for any of the following conditions?",
+            "answers": [
+              "Middle ear infection",
+              "Tinnitus",
+              "Meniere's disease",
+              "Clogged earwax",
+              "Eardrum perforation"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all that apply"
+          },
+          {
+            "question": "Have you currently had or have you had any of the following diseases?",
+            "answers": [
+              "None of the above",
+              "High blood pressure",
+              "Diabetes",
+              "Thyroid problems"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all that apply"
+          },
+          {
+            "question": "Have you had any of the following procedures or surgeries",
+            "answers": [
+              "None of the above",
+              "Ear surgery",
+              "Cochlear implantation",
+              "Middle ear implant"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all that apply"
+          },
+          {
+            "question": "Are you currently taking any medication?",
+            "answers": [
+              "None of the above",
+              "Antibiotics",
+              "Diuretic",
+              "Aspirin or blood thinner"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all that apply"
+          },
+          {
+            "question": "Have you experienced any sudden or significant hearing changes?",
+            "answers": ["Yes", "No"]
+          },
+          {
+            "question": "Have you ever had a hearing test or a test before?",
+            "answers": ["Yes", "No"]
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "Which ear do you test?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "Add photo.",
+            "subtitle": "Please attach a photo of your eardrum.\nYou can attach up to 5 photos."
+          }
+        ]
+      }
+    ],
+    "hearingtest": [
+      {
+        "index": 3,
+        "title": "Hearing",
+        "category": "ear",
+        "hearingProgress": [
+          {
+            "question": "Conduct a hearing test.\nConnect earphones\nor headphones to the device.",
+            "progressType": "text"
+          },
+          {
+            "question": "Test the right ear.",
+            "subtitle": "When you hear a beep,\npress the button.",
+            "progressType": "right",
+            "stepcount": 4,
+            "audioProgress": [
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "It's great.",
+            "subtitle": "Now test the other ear.",
+            "progressType": "text"
+          },
+          {
+            "question": "Test the left ear.",
+            "subtitle": "When you hear a beep,\npress the button.",
+            "progressType": "left",
+            "stepcount": 4,
+            "audioProgress": [
+              {
+                "frequency": 500,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 1000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 2000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              },
+              {
+                "frequency": 4000,
+                "volume": 1,
+                "step": 5,
+                "status": "not tested"
+              }
+            ]
+          },
+          {
+            "question": "Good job!",
+            "subtitle": "Processing results.",
+            "progressType": "text"
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 4,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+          {
+            "key": "audiogram",
+            "background": "container",
+            "type": "graph",
+            "title": "📈 Audiogram"
+          },
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

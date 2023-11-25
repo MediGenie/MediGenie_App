@@ -1,0 +1,129 @@
+{
+  "startmenu": ["Điền câu trả lời", "Xem Kết quả"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 11,
+        "questions": [
+          {
+            "question": "Nhiệt độ của con bạn là bao nhiêu?",
+            "answers": ["36.0~37.1", "37.2~38.0", "38.1~39.0", "39.1~"]
+          },
+          {
+            "question": "Bạn sẽ mô tả hành vi hàng ngày của con như thế nào?",
+            "answers": [
+              "Bình tĩnh và thư giãn",
+              "Hiếu động nhưng có thể quản lý",
+              "Thường xuyên vận động hoặc hiếu động quá mức",
+              "Thường xuyên khó chịu hoặc khó quản lý"
+            ]
+          },
+          {
+            "question": "Con bạn có gặp khó khăn khi tập trung làm việc? (như bài tập ở trường hoặc việc nhà)",
+            "answers": [
+              "Không bao giờ",
+              "Thỉnh thoảng",
+              "Thường xuyên",
+              "Luôn luôn"
+            ]
+          },
+          {
+            "question": "Con bạn phản ứng thế nào khi được hướng dẫn hoặc được gọi tên?",
+            "answers": [
+              "Trả lời và làm theo hướng dẫn một cách nhất quán",
+              "Thường đáp ứng, nhưng không nhất quán",
+              "Hiếm khi trả lời hoặc làm theo hướng dẫn",
+              "Không trả lời hoặc làm theo hướng dẫn"
+            ]
+          },
+          {
+            "question": "Con bạn có nghe và hiểu những gì được nói với chúng?",
+            "answers": [
+              "Vâng, luôn luôn",
+              "Vâng, thường là như vậy",
+              "Thỉnh thoảng",
+              "Hiếm khi hoặc không bao giờ"
+            ]
+          },
+          {
+            "question": "Con bạn có nhìn rõ đồ vật và người ở các khoảng cách khác nhau không?",
+            "answers": [
+              "Vâng, luôn luôn",
+              "Vâng, thường là như vậy",
+              "Thỉnh thoảng",
+              "Hiếm khi hoặc không bao giờ"
+            ]
+          },
+          {
+            "question": "Con bạn có nheo mắt hoặc gặp khó khăn khi đọc chữ in nhỏ không?",
+            "answers": [
+              "Vâng, luôn luôn",
+              "Vâng, thường là như vậy",
+              "Thỉnh thoảng",
+              "Hiếm khi hoặc không bao giờ"
+            ]
+          },
+          {
+            "question": "Chế độ ăn uống của con bạn?",
+            "answers": [
+              "Chế độ ăn uống cân bằng với trái cây, rau, ngũ cốc, protein",
+              "Đồ ăn thông thường và cơm",
+              "Chủ yếu ăn chay / ăn toàn thực vật",
+              "Chế độ ăn uống đặc biệt do nhu cầu y tế"
+            ]
+          },
+          {
+            "question": "Con bạn ăn bao nhiêu lần trong ngày?",
+            "answers": [
+              "3 bữa chính không ăn vặt",
+              "3 bữa chính với 1-2 bữa phụ",
+              "3 bữa chính kèm 3 bữa phụ trở lên",
+              "Bữa ăn và bữa lỡ không theo tần xuất cụ thể"
+            ]
+          },
+          {
+            "question": "Con bạn hiện có đang dùng thuốc kê đơn không?",
+            "answers": [
+              "không dùng thuốc",
+              "Có, thường xuyên sử dụng thuốc kê đơn",
+              "Có, thỉnh thoảng sử dụng thuốc kê đơn",
+              "Tự mua thuốc tại nhà thuốc"
+            ]
+          },
+          {
+            "question": "Trẻ có bị dị ứng gì không?",
+            "answers": [
+              "Không có dị ứng hoặc Không chắc chắn",
+              "Vâng, dị ứng với thức ăn",
+              "Vâng, dị ứng với thuốc",
+              "Có, với các yếu tố môi trường"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 2,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

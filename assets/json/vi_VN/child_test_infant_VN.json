@@ -1,0 +1,124 @@
+{
+  "startmenu": ["Điền câu trả lời", "Xem Kết quả"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 11,
+        "questions": [
+          {
+            "question": "Nhiệt độ của con bạn là bao nhiêu?",
+            "answers": ["36.0~37.1", "37.2~38.0", "38.1~39.0", "39.1~"]
+          },
+          {
+            "question": "Số lần ngủ của trẻ sơ sinh trong ngày?",
+            "answers": ["3-4 lần", "Hiếm khi", "1-2 lần", "Hơn 4 lần"]
+          },
+          {
+            "question": "Cảm súc chung của trẻ trong ngày?",
+            "answers": [
+              "Thường bình tĩnh và vui vẻ",
+              "Thường xuyên quấy khóc, nhưng dỗ được",
+              "Thường cáu kỉnh và khó dỗ dành",
+              "Liên tục khóc và không thể nguôi ngoai"
+            ]
+          },
+          {
+            "question": "Trẻ phản ứng thế nào với âm thanh?",
+            "answers": [
+              "Quay mặt về hướng âm thanh",
+              "Giật mình hoặc thức dậy",
+              "Lờ đi, bỏ qua",
+              "Không chắc"
+            ]
+          },
+          {
+            "question": "Trẻ có phản ứng với tên hoặc giọng nói thân thuộc?",
+            "answers": [
+              "Có, thường xuyên",
+              "Có, nhưng không thường xuyên",
+              "Hiếm khi",
+              "Không chắc"
+            ]
+          },
+          {
+            "question": "Trẻ có chú ý vào đồ vật hoặc người ở gần không?",
+            "answers": [
+              "Có, thường xuyên",
+              "Có, nhưng không thường xuyên",
+              "Hiếm khi",
+              "Không chắc"
+            ]
+          },
+          {
+            "question": "Trẻ có nhận ra những khuôn mặt thân thuộc?",
+            "answers": [
+              "Có, thường xuyên",
+              "Có, nhưng không thường xuyên",
+              "Hiếm khi",
+              "Không chắc"
+            ]
+          },
+          {
+            "question": "Khoảng cách giữa các bữa ăn của trẻ?",
+            "answers": [
+              "Mỗi 3-5 giờ",
+              "Sau 1-3 giờ",
+              "Mỗi 5-8 giờ",
+              "Hơn 8 giờ một lần"
+            ]
+          },
+          {
+            "question": "Chế độ ăn của trẻ?",
+            "answers": [
+              "Ăn dặm",
+              "Bú sữa mẹ/ bú sữa bình",
+              "Ăn thức ăn cứng",
+              "Dinh dưỡng y tế đặc biệt"
+            ]
+          },
+          {
+            "question": "Trẻ có đang được chỉ định sử dụng thuốc kê toa?",
+            "answers": [
+              "không dùng thuốc",
+              "Có, thường xuyên sử dụng thuốc kê đơn",
+              "Có, thỉnh thoảng dùng thuốc theo toa",
+              "Tự mua thuốc tại nhà thuốc"
+            ]
+          },
+          {
+            "question": "Trẻ có bị dị ứng gì không?",
+            "answers": [
+              "Không có dị ứng hoặc Không chắc chắn",
+              "Vâng, dị ứng với thức ăn",
+              "Vâng, dị ứng với thuốc",
+              "Có, với các yếu tố môi trường"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 2,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "startmenu": ["Answer few questions", "Add photo", "See your results"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 8,
+        "questions": [
+          {
+            "question": "Have you experienced any changes in your hearing in recent years?",
+            "answers": [
+              "Yes, significant change",
+              "Yes, a little change",
+              "No, my hearing is stable"
+            ]
+          },
+          {
+            "question": "Having trouble understanding conversations in public environments?",
+            "answers": ["Yes, often", "Sometimes", "No, never"]
+          },
+          {
+            "question": "Have you ever used a hearing aid?",
+            "answers": [
+              "Yes, I'm currently using a hearing aid",
+              "Yes, but I don't use hearing aids now",
+              "No, I've never used a hearing aid"
+            ]
+          },
+          {
+            "question": "Are you currently on medication that can affect your hearing or balance?",
+            "answers": ["Yes", "No"]
+          },
+          {
+            "question": "Have you ever fallen or experienced dizziness or imbalance",
+            "answers": [
+              "Yes, within the last year",
+              "Yes, but more than a year ago",
+              "No, I've never fallen or felt dizzy"
+            ]
+          },
+          {
+            "question": "Have you ever been exposed to loud noises in your lifetime (e.g. occupational exposure, recreational activities)?",
+            "answers": ["Yes, often", "Sometimes", "Little or none"]
+          },
+          {
+            "question": "Have you ever experienced ear pain, ear pus, or repeated ear infections?",
+            "answers": ["Yes, often", "Sometimes", "Little or none"]
+          },
+          {
+            "question": "Have you ever had ear surgery?",
+            "answers": ["Yes", "No"]
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "Which ear do you test?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "Add a photo.",
+            "subtitle": "Please attach a photo of your eardrum.\nYou can attach up to 5 photos."
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "startmenu": ["Answer few questions", "Add photo", "See your results"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 8,
+        "questions": [
+          {
+            "question": "Has your child passed the newborn hearing screening?",
+            "answers": [
+              "Yes",
+              "No, the hearing screening was not passed",
+              "Not sure (not conducted)"
+            ]
+          },
+          {
+            "question": "Has your child previously received a hearing evaluation or hearing test?",
+            "answers": ["Yes", "No"]
+          },
+          {
+            "question": "Is there a family history of hearing loss or ear disorders?",
+            "answers": ["No", "Yes"]
+          },
+          {
+            "question": "Has your child ever shown signs of hearing impairment?",
+            "answers": [
+              "None of the below",
+              "Difficulty following simple verbal instructions",
+              "Insufficient response to loud sounds",
+              "Delayed language development"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all applicable items"
+          },
+          {
+            "question": "Has your child ever shown signs of hearing impairment?",
+            "answers": [
+              "None of the below",
+              "Difficulty following simple verbal instructions",
+              "Insufficient response to loud sounds",
+              "Delayed language development"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all applicable items"
+          },
+          {
+            "question": "Has your child been diagnosed with any of the following conditions?",
+            "answers": [
+              "None of the below",
+              "Congenital hearing loss",
+              "Ear problems\n(congenital structural abnormalities)",
+              "Genetic syndromes associated with hearing loss"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all applicable items"
+          },
+          {
+            "question": "Has your child received any intervention or treatment for hearing impairment?",
+            "answers": [
+              "None of the below",
+              "Hearing aids",
+              "Cochlear implant surgery",
+              "Speech therapy"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all applicable items"
+          },
+          {
+            "question": "Has your child been exposed to factors that could contribute to hearing loss or ear disorders?",
+            "answers": [
+              "None of the below",
+              "Frequent exposure to loud noise",
+              "Recurrent ear infections",
+              "History of head trauma"
+            ],
+            "reduplication": true,
+            "subtitle": "Select all applicable items"
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "Which ear do you test?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "Add a photo.",
+            "subtitle": "Please attach a photo of your eardrum.\nYou can attach up to 5 photos."
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

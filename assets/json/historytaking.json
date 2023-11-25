@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "question": "Has your child passed the newborn hearing screening?",
+      "answer": "No, the hearing screening was not passed"
+    },
+    {
+      "question": "Has your child previously received a hearing evaluation or hearing test?",
+      "answer": "Yes"
+    },
+    {
+      "question": "Is there a family history of hearing loss or ear disorders?",
+      "answer": "No"
+    },
+    {
+      "question": "Has your child ever shown signs of hearing impairment?",
+      "answer": "Difficulty following simple verbal instructions"
+    },
+    {
+      "question": "Has your child ever shown signs of hearing impairment?",
+      "answer": "Insufficient response to loud sounds"
+    },
+    {
+      "question": "Has your child been diagnosed with any of the following conditions?",
+      "answer": "None of the below"
+    },
+    {
+      "question": "Has your child received any intervention or treatment for hearing impairment?",
+      "answer": "Cochlear implant surgery"
+    },
+    {
+      "question": "Has your child been exposed to factors that could contribute to hearing loss or ear disorders?",
+      "answer": "Recurrent ear infections"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "startmenu": [
+    "질문에 답해주세요.",
+    "사진을 추가하세요.",
+    "결과를 확인하세요."
+  ],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 9,
+        "questions": [
+          {
+            "question": "다음 증상을\n경험한 적이 있나요?",
+            "answers": [
+              "해당 사항 없음",
+              "청력 상실 또는 청력 상실",
+              "이명",
+              "귀의 통증 또는 불편함"
+            ],
+            "reduplication": true,
+            "subtitle": "해당하는 항목을 모두 선택하세요."
+          },
+          {
+            "question": "다음 중 정기적으로\n사용하는 기기는 무엇인가요?",
+            "answers": ["해당 사항 없음", "헤드폰/이어폰", "보청기", "귀마개"],
+            "reduplication": true,
+            "subtitle": "해당 기기를 모두 선택하세요."
+          },
+          {
+            "question": "다음과 같은\n직업적 또는 오락적 소음원에\n노출된 적이 있나요?",
+            "answers": [
+              "해당 사항 없음",
+              "건설 현장",
+              "시끄러운 음악 콘서트 또는 장소",
+              "시끄러운 기계 또는 장비"
+            ],
+            "reduplication": true,
+            "subtitle": "해당하는 항목을 모두 선택하세요."
+          },
+          {
+            "question": "다음 질환에 대해\n진단을 받거나\n치료를 받은 적이 있나요?",
+            "answers": ["해당 사항 없음", "중이염", "이명", "고막 천공"],
+            "reduplication": true,
+            "subtitle": "해당하는 항목을 모두 선택하세요."
+          },
+          {
+            "question": "현재 다음 질병을\n앓고 있거나 앓은 적이 있나요?",
+            "answers": ["해당 사항 없음", "고혈압", "당뇨병", "갑상선 문제"],
+            "reduplication": true,
+            "subtitle": "해당하는 항목을 모두 선택하세요."
+          },
+          {
+            "question": "다음 절차 또는 수술을\n받은 적이 있나요?",
+            "answers": [
+              "해당 사항 없음",
+              "귀 수술",
+              "달팽이관 이식",
+              "중이 임플란트"
+            ],
+            "reduplication": true,
+            "subtitle": "해당하는 항목을 모두 선택하세요."
+          },
+          {
+            "question": "현재 복용하고 있는\n약이 있나요?",
+            "answers": [
+              "해당 사항 없음",
+              "항생제",
+              "이뇨제",
+              "아스피린 또는 혈액 희석제"
+            ],
+            "reduplication": true,
+            "subtitle": "해당하는 항목을 모두 선택하세요."
+          },
+          {
+            "question": "갑작스럽거나 중대한\n청력 변화를 경험한 적이 있습니까?",
+            "answers": ["예", "아니요"]
+          },
+          {
+            "question": "이전에 청력 검사나 테스트를\n받은 적이 있습니까?",
+            "answers": ["예", "아니요"]
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "어느쪽 귀를\n검사하고 싶나요?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "사진을 추가하세요.",
+            "subtitle": "고막 사진을 첨부해주세요.\n사진은 최대 5장까지 첨부할 수 있어요."
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "startmenu": ["Answer few questions", "See your results"],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 11,
+        "questions": [
+          {
+            "question": "What is your child's temperature?",
+            "answers": ["36.0~37.1", "37.2~38.0", "38.1~39.0", "39.1~"]
+          },
+          {
+            "question": "How often does your infant sleep during the day?",
+            "answers": ["Rarely", "1-2 times", "3-4 times", "More than 4 times"]
+          },
+          {
+            "question": "How would you describe your infant's general mood?",
+            "answers": [
+              "Usually calm and content",
+              "Frequently fussy, but can be comforted",
+              "Often irritable and hard to comfort",
+              "Continually crying and inconsolable"
+            ]
+          },
+          {
+            "question": "How does your infant respond to loud noises?",
+            "answers": [
+              "Not sure",
+              "Startles or wakes up",
+              "Ignores them",
+              "Cries"
+            ]
+          },
+          {
+            "question": "Does your infant turn towards sounds?",
+            "answers": [
+              "Yes, frequently",
+              "Yes, but not always",
+              "Rarely",
+              "Not sure"
+            ]
+          },
+          {
+            "question": "Does your infant focus on your face?",
+            "answers": [
+              "Yes, frequently",
+              "Yes, but not always",
+              "Rarely",
+              "Not sure"
+            ]
+          },
+          {
+            "question": "Has your infant begun to follow moving objects with their eyes?",
+            "answers": [
+              "Yes, frequently",
+              "Yes, but not always",
+              "Rarely",
+              "Not sure"
+            ]
+          },
+          {
+            "question": "How often is your infant fed?",
+            "answers": [
+              "Every 4-6 hours",
+              "Every 1-2 hours",
+              "Every 2-4 hours",
+              "Less frequently than every 6 hours"
+            ]
+          },
+          {
+            "question": "What type of feeding does your infant have?",
+            "answers": [
+              "Both breastfeeding and formula",
+              "Breastfeeding",
+              "Formula feeding",
+              "Special medical nutritional needs"
+            ]
+          },
+          {
+            "question": "Is your infant currently on any prescribed medication?",
+            "answers": [
+              "No medication",
+              "Yes, regular prescribed medication",
+              "Yes, occasional prescribed medication",
+              "Over-the-counter medication only"
+            ]
+          },
+          {
+            "question": "Does your infant have any known allergies?",
+            "answers": [
+              "No known allergies or Not sure",
+              "Yes, to food",
+              "Yes, to medication",
+              "Yes, to environmental factors"
+            ]
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 2,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}

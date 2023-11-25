@@ -1,0 +1,108 @@
+{
+  "startmenu": [
+    "질문에 답해주세요.",
+    "사진을 추가하세요.",
+    "결과를 확인하세요."
+  ],
+  "testflow": {
+    "historytaking": [
+      {
+        "index": 1,
+        "title": "Question",
+        "order": 8,
+        "questions": [
+          {
+            "question": "다른 사람들이 공공장소에서\n당신에게 목소리를 작게 하라거나\n스마트폰 벨소리 볼륨을 줄이라고\n말한 적이 있나요?",
+            "answers": ["아니오", "네"]
+          },
+          {
+            "question": "공공 장소에서\n대화를 이해하는 데\n어려움을 겪고 있나요?",
+            "answers": [
+              "거의 없습니다.",
+              "네, 자주 그렇습니다.",
+              "때때로 그렇습니다."
+            ]
+          },
+          {
+            "question": "보청기를\n사용한 적이 있나요?",
+            "answers": [
+              "네, 현재 보청기를 사용 중입니다.",
+              "네, 그러나 현재 보청기를 사용하지 않습니다.",
+              "아니오, 보청기를 사용해 본 적이 없습니다."
+            ]
+          },
+          {
+            "question": "귀에 청력이나 균형에\n영향을 줄 수 있는 약물을\n현재 복용 중이신가요?",
+            "answers": ["네", "아니오"]
+          },
+          {
+            "question": "지난 1년 내에 넘어진 적이\n있거나 어지럽거나\n균형을 잃은 적이 있나요?",
+            "answers": [
+              "네, 지난 1년 내에 있었습니다.",
+              "네, 그러나 1년 이상 전에 있었습니다.",
+              "아니오, 넘어지거나 어지럽거나 불균형을 느낀 적이 없습니다."
+            ]
+          },
+          {
+            "question": "평생 동안 큰 소음에\n노출되었던 적이 있나요? (예: 직업적 노출, 여가 활동)",
+            "answers": [
+              "네, 자주 그렇습니다.",
+              "때때로 그렇습니다.",
+              "거의 없습니다."
+            ]
+          },
+          {
+            "question": "귀 통증, 귀에서 액체,\n반복되는 귀 감염 등을\n경험한 적이 있나요?",
+            "answers": [
+              "네, 자주 그렇습니다.",
+              "때때로 그렇습니다.",
+              "거의 없습니다."
+            ]
+          },
+          {
+            "question": "귀 수술을\n받은 적이 있나요?",
+            "answers": ["네", "아니오"]
+          }
+        ]
+      }
+    ],
+    "addphoto": [
+      {
+        "index": 2,
+        "title": "Add photo",
+        "category": "ear",
+        "questions": [
+          {
+            "question": "어느쪽 귀를\n검사하고 싶나요?",
+            "answers": ["Left", "Right"]
+          },
+          {
+            "question": "사진을 추가하세요.",
+            "subtitle": "고막 사진을 첨부해주세요.\n사진은 최대 5장까지 첨부할 수 있어요."
+          }
+        ]
+      }
+    ],
+    "results": [
+      {
+        "index": 3,
+        "title": "Result",
+        "diagnosesresult": [
+          {
+            "key": "advice",
+            "background": "image",
+            "type": "text",
+            "title": "Healed perforation"
+          },
+
+          {
+            "key": "referral",
+            "background": "container",
+            "type": "text",
+            "title": "🧑‍⚕️ Medical referral"
+          }
+        ]
+      }
+    ]
+  }
+}
