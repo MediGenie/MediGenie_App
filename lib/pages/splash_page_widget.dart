@@ -123,7 +123,7 @@ class _SplashPageWidgetState extends State<SplashPageWidget> with TickerProvider
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await Future.delayed(const Duration(milliseconds: 300));
       bool isLogin = await SocialManager.getInstance().isSocialLogin();
-      print("isLogin->${isLogin}");
+      print("isLogin->$isLogin");
       if (!isLogin) {
         await initPlatformState();
         await homeInfoLoad(false);
