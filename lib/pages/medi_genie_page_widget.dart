@@ -8,7 +8,6 @@ import 'package:medi_genie/manager/inappBrowserManager.dart';
 import 'package:medi_genie/manager/uiManager.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 export '../model/medi_genie_page_model.dart';
 
@@ -53,7 +52,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
             child: Text(
-              'MediGenie',
+              'MediEar',
               textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).titleLarge,
             ),
@@ -79,7 +78,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                         child: Align(
                           alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Text(
-                            Strings.appTodayFeeling.tr(),
+                            "연세대 인공지능",
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context).displayLarge,
                           ),
@@ -91,67 +90,21 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                 ClipRRect(
                   child: Container(
                     width: double.infinity,
-                    height: 46.0,
+                    height: 6.0,
                     decoration: const BoxDecoration(
                       color: Color(0x00FFFFFF),
                     ),
                     alignment: const AlignmentDirectional(0.0, 0.0),
-                    child: Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                    child: const Align(
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                        padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                         child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              FFButtonWidget(
-                                onPressed: () async {
-                                  print('Button pressed ...');
-                                  // AudioPlayer audioPlayer = AudioPlayer();
-                                  // audioPlayer.setSource(AssetSource('audios/2000Hz_R.mp3'));
-                                  // audioPlayer.play(AssetSource('audios/2000Hz_R.mp3'));
-                                },
-                                text: '🧑‍ ${Strings.appAll.tr()}',
-                                options: FFButtonOptions(
-                                  elevation: 0.0,
-                                  width: 86.0,
-                                  height: 46.0,
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                        fontFamily: 'Plus Jakarta Sans',
-                                        color: Colors.white,
-                                      ),
-                                  borderSide: const BorderSide(
-                                    color: Colors.transparent,
-                                    width: 1.0,
-                                  ),
-                                  borderRadius: BorderRadius.circular(100.0),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 0.0, 0.0),
-                                child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
-                                  },
-                                  text: '👂 ${Strings.appEarNoseThroat.tr()}',
-                                  options: FFButtonOptions(
-                                    elevation: 0.0,
-                                    width: 164.0,
-                                    height: 46.0,
-                                    color: FlutterFlowTheme.of(context).secondaryBackground,
-                                    textStyle: FlutterFlowTheme.of(context).labelMedium,
-                                    borderSide: const BorderSide(
-                                      color: Colors.transparent,
-                                      width: 1.0,
-                                    ),
-                                    borderRadius: BorderRadius.circular(100.0),
-                                  ),
-                                ),
-                              ),
-                            ],
+                            children: [],
                           ),
                         ),
                       ),

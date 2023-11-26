@@ -149,7 +149,7 @@ class _NavBarPageState extends State<NavBarPage> {
           currentIndex: currentIndex,
           onTap: (i) => setState(() {
             _currentPage = null;
-            _currentPageName = tabs.keys.toList()[i];
+            //_currentPageName = tabs.keys.toList()[i];
           }),
           backgroundColor: const Color(0x00FFFFFF),
           selectedItemColor: FlutterFlowTheme.of(context).primaryText,
@@ -163,64 +163,13 @@ class _NavBarPageState extends State<NavBarPage> {
           elevation: 0.0,
           items: [
             FloatingNavbarItem(
-              customWidget: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    const Icon(FFIcons.khome).icon,
-                    color: currentIndex == 0 ? FlutterFlowTheme.of(context).primaryText : FlutterFlowTheme.of(context).disabledText,
-                    size: 24.0,
-                  ),
-                  Text(
-                    Strings.appHome.tr(),
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: currentIndex == 0 ? FlutterFlowTheme.of(context).primaryText : FlutterFlowTheme.of(context).disabledText,
-                      fontSize: 11.0,
-                    ),
-                  ),
-                ],
-              ),
+              customWidget: Container(),
             ),
             FloatingNavbarItem(
-              customWidget: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    const Icon(FFIcons.kdiagnosis).icon,
-                    color: currentIndex == 1 ? FlutterFlowTheme.of(context).primaryText : FlutterFlowTheme.of(context).disabledText,
-                    size: 24.0,
-                  ),
-                  Text(
-                    Strings.appDiagnosis.tr(),
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: currentIndex == 1 ? FlutterFlowTheme.of(context).primaryText : FlutterFlowTheme.of(context).disabledText,
-                      fontSize: 11.0,
-                    ),
-                  ),
-                ],
-              ),
+              customWidget: Container(),
             ),
             FloatingNavbarItem(
-              customWidget: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    const Icon(FFIcons.kmy).icon,
-                    color: currentIndex == 2 ? FlutterFlowTheme.of(context).primaryText : FlutterFlowTheme.of(context).disabledText,
-                    size: 24.0,
-                  ),
-                  Text(
-                    Strings.appMy.tr(),
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      color: currentIndex == 2 ? FlutterFlowTheme.of(context).primaryText : FlutterFlowTheme.of(context).disabledText,
-                      fontSize: 11.0,
-                    ),
-                  ),
-                ],
-              ),
+              customWidget: Container(),
             ),
           ],
         ),

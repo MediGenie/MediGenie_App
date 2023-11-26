@@ -40,7 +40,7 @@ class _SplashPageWidgetState extends State<SplashPageWidget> with TickerProvider
       var userResponse = await jsonDecode(response.response?.body ?? "")['user'];
       DataManager.getInstance().userModel = UserModel.fromJson(userResponse);
       ApiManager.setToken(responseJson);
-      // print(responseJson);
+      print(responseJson);
       // print(DataManager.getInstance().userModel?.id);
       // print(DataManager.getInstance().userModel?.isFirst);
     }
@@ -144,14 +144,14 @@ class _SplashPageWidgetState extends State<SplashPageWidget> with TickerProvider
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            color: FlutterFlowTheme.of(context).primary,
+            color: Color(0xFF222222),
           ),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
-                'assets/images/app_icon.png',
+                'assets/images/aiplaza.png',
                 width: 200.0,
                 height: 200.0,
                 fit: BoxFit.fill,
