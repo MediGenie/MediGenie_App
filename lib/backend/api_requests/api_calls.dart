@@ -9,7 +9,7 @@ import 'api_manager.dart';
 export 'api_manager.dart' show ApiCallResponse;
 
 const _kPrivateApiFunctionName = 'ffPrivateApiCall';
-const _kPrivateApiUrl = 'https://api.aiplaza.kr/api';
+const _kPrivateApiUrl = 'https://api.medigenie.ai/api';
 
 class PostGeustLoginCall {
   static Future<ApiCallResponse> call({
