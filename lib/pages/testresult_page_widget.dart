@@ -955,7 +955,7 @@ class _TestResultPageWidgetState extends State<TestResultPageWidget> {
     setState(() {
       _gptStreamText = '';
     });
-    final request = http.Request("POST", Uri.parse("https://api.aiplaza.kr/api/diagnosis/$_diagnosisId/ai"));
+    final request = http.Request("POST", Uri.parse("https://api.medigenie.ai/api/diagnosis/$_diagnosisId/ai"));
     request.headers["Content-Type"] = "application/json";
     request.headers["Authorization"] = "Bearer ${ApiManager.accessToken}";
     request.headers["Accept-Language"] = "${ApiManager.locale!.languageCode}_${ApiManager.locale!.countryCode}";
