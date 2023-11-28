@@ -15,7 +15,7 @@ export 'login_popup_model.dart';
 class LoginPopupWidget extends StatefulWidget {
   Function? loginCallbak = () {};
   bool? isSkip = false;
-  LoginPopupWidget({Key? key, Function? loginCallbak, bool? isSkip}) : super(key: key) {
+  LoginPopupWidget({super.key, Function? loginCallbak, bool? isSkip}) {
     this.loginCallbak = loginCallbak;
     this.isSkip = isSkip;
   }

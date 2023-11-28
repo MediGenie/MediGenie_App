@@ -16,12 +16,11 @@ class SignupInputPageWidget extends StatefulWidget {
   final String? privacyTime;
 
   const SignupInputPageWidget({
-    Key? key,
+    super.key,
     String? termTime,
     String? privacyTime,
   })  : termTime = termTime,
-        privacyTime = privacyTime,
-        super(key: key);
+        privacyTime = privacyTime;
 
   @override
   _SignupInputPageWidgetState createState() => _SignupInputPageWidgetState();

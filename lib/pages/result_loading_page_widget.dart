@@ -4,7 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import 'package:flutter/material.dart';
 
 class ResultLoadingPageWidget extends StatefulWidget {
-  const ResultLoadingPageWidget({Key? key}) : super(key: key);
+  const ResultLoadingPageWidget({super.key});
 
   @override
   _ResultLoadingPageWidgetState createState() => _ResultLoadingPageWidgetState();

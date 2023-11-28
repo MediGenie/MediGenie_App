@@ -8,13 +8,12 @@ import 'package:medi_genie/pages/medi_genie_page_widget.dart';
 import 'package:platform_device_id/platform_device_id.dart';
 import 'package:medi_genie/manager/socialManager.dart';
 
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
 class SplashPageWidget extends StatefulWidget {
-  const SplashPageWidget({Key? key}) : super(key: key);
+  const SplashPageWidget({super.key});
 
   @override
   _SplashPageWidgetState createState() => _SplashPageWidgetState();
@@ -143,7 +142,7 @@ class _SplashPageWidgetState extends State<SplashPageWidget> with TickerProvider
         child: Container(
           width: double.infinity,
           height: double.infinity,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xFF222222),
           ),
           child: Column(

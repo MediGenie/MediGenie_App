@@ -13,7 +13,7 @@ import '../model/setting_page_model.dart';
 export '../model/setting_page_model.dart';
 
 class SettingPageWidget extends StatefulWidget {
-  const SettingPageWidget({Key? key}) : super(key: key);
+  const SettingPageWidget({super.key});
 
   @override
   _SettingPageWidgetState createState() => _SettingPageWidgetState();

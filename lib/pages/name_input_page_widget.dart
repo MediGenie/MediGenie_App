@@ -12,10 +12,9 @@ import 'package:provider/provider.dart';
 class NameInputPageWidget extends StatefulWidget {
   final PageController pageController;
   const NameInputPageWidget({
-    Key? key,
+    super.key,
     required PageController pageController,
-  })  : pageController = pageController,
-        super(key: key);
+  })  : pageController = pageController;
 
   @override
   State<NameInputPageWidget> createState() => _NameInputPageWidgetState();

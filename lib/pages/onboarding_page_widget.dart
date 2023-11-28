@@ -11,10 +11,9 @@ export '../model/onboarding_page_model.dart';
 
 class OnboardingPageWidget extends StatefulWidget {
   const OnboardingPageWidget({
-    Key? key,
+    super.key,
     int? pageViewCurrentIndex,
-  })  : pageViewCurrentIndex = pageViewCurrentIndex ?? 0,
-        super(key: key);
+  })  : pageViewCurrentIndex = pageViewCurrentIndex ?? 0;
 
   final int pageViewCurrentIndex;
 

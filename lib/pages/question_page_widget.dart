@@ -18,9 +18,9 @@ export '../model/question_page_model.dart';
 class QuestionPageWidget extends StatefulWidget {
   String? orderIndex;
   QuestionPageWidget({
-    Key? key,
+    super.key,
     String? orderIndex,
-  }) : super(key: key) {
+  }) {
     this.orderIndex = orderIndex;
   }
 

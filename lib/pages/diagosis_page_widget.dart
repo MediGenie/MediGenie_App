@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 export '../model/diagosis_page_model.dart';
 
 class DiagosisPageWidget extends StatefulWidget {
-  const DiagosisPageWidget({Key? key}) : super(key: key);
+  const DiagosisPageWidget({super.key});
 
   @override
   _DiagosisPageWidgetState createState() => _DiagosisPageWidgetState();

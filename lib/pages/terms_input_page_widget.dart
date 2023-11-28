@@ -13,10 +13,9 @@ export '../model/terms_of_service_page_model.dart';
 class TermsInputPageWidget extends StatefulWidget {
   final PageController pageController;
   const TermsInputPageWidget({
-    Key? key,
+    super.key,
     required PageController pageController,
-  })  : pageController = pageController,
-        super(key: key);
+  })  : pageController = pageController;
 
   @override
   _TermsInputPageWidgetState createState() => _TermsInputPageWidgetState();

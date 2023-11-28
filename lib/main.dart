@@ -4,7 +4,6 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_localization_loader/easy_localization_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:medi_genie/backend/api_requests/api_manager.dart';
-import 'package:medi_genie/localization/strings.dart';
 import 'package:medi_genie/provider/input_userinfo.dart';
 import 'package:medi_genie/provider/mypage_info.dart';
 import 'package:provider/provider.dart';
@@ -90,6 +89,7 @@ class _MyAppState extends State<MyApp> {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -103,7 +103,7 @@ class MyHttpOverrides extends HttpOverrides {
 }
 
 class NavBarPage extends StatefulWidget {
-  const NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
+  const NavBarPage({super.key, this.initialPage, this.page});
 
   final String? initialPage;
   final Widget? page;

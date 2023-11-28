@@ -25,13 +25,12 @@ export '../model/question_page_model.dart';
 class AddPhotoPageWidget extends StatefulWidget {
   String? orderIndex;
   AddPhotoPageWidget({
-    Key? key,
-    String? orderIndex,
-  }) : super(key: key) {
-    this.orderIndex = orderIndex;
-  }
+    super.key,
+    this.orderIndex,
+  });
 
   @override
+  // ignore: library_private_types_in_public_api
   _AddPhotoPageWidgetState createState() => _AddPhotoPageWidgetState();
 }
 
@@ -740,10 +739,10 @@ class ConsultContainer extends StatefulWidget {
   bool isPressed = false;
 
   ConsultContainer({
-    Key? key,
+    super.key,
     required this.index,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   State<ConsultContainer> createState() => _ConsultContainerState();

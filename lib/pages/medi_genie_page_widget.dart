@@ -12,9 +12,10 @@ import 'package:flutter/material.dart';
 export '../model/medi_genie_page_model.dart';
 
 class MediGeniePageWidget extends StatefulWidget {
-  const MediGeniePageWidget({Key? key}) : super(key: key);
+  const MediGeniePageWidget({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _MediGeniePageWidgetState createState() => _MediGeniePageWidgetState();
 }
 

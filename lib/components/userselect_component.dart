@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class UserSelectComponenetWidget extends StatefulWidget {
   Function? loginCallbak = () {};
-  UserSelectComponenetWidget({Key? key, Function? loginCallbak}) : super(key: key) {
+  UserSelectComponenetWidget({super.key, Function? loginCallbak}) {
     this.loginCallbak = loginCallbak;
   }
 

@@ -17,7 +17,7 @@ import 'package:flutter/material.dart';
 export '../model/terms_of_service_page_model.dart';
 
 class TermsOfServicePageWidget extends StatefulWidget {
-  const TermsOfServicePageWidget({Key? key}) : super(key: key);
+  const TermsOfServicePageWidget({super.key});
 
   @override
   _TermsOfServicePageWidgetState createState() => _TermsOfServicePageWidgetState();
