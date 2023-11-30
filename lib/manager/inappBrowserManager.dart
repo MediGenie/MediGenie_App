@@ -34,7 +34,7 @@ class MyInAppBrowser extends InAppBrowser {
 }
 
 class MyInAppWebView extends InAppWebView {
-  const MyInAppWebView({super.key});
+  MyInAppWebView({super.key});
 
   Future onBrowserCreated() async {
     print("Browser Created!");
