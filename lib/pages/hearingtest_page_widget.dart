@@ -20,9 +20,9 @@ export '../model/question_page_model.dart';
 class HearingTestPageWidget extends StatefulWidget {
   String? orderIndex;
   HearingTestPageWidget({
-    Key? key,
+    super.key,
     String? orderIndex,
-  }) : super(key: key) {
+  }) {
     this.orderIndex = orderIndex;
   }
 

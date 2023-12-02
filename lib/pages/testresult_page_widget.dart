@@ -22,7 +22,7 @@ import '../backend/stream_client.dart';
 class TestResultPageWidget extends StatefulWidget {
   String? index;
   String? result;
-  TestResultPageWidget({Key? key, String? index, String? result}) : super(key: key) {
+  TestResultPageWidget({super.key, String? index, String? result}) {
     this.index = index;
     this.result = result;
   }

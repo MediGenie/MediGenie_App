@@ -11,7 +11,7 @@ import '../model/start_page_model.dart';
 export '../model/start_page_model.dart';
 
 class StartPageWidget extends StatefulWidget {
-  const StartPageWidget({Key? key}) : super(key: key);
+  const StartPageWidget({super.key});
 
   @override
   _StartPageWidgetState createState() => _StartPageWidgetState();
@@ -207,12 +207,12 @@ class ConsultContainer extends StatefulWidget {
   bool isPressed = false;
 
   ConsultContainer({
-    Key? key,
+    super.key,
     required this.index,
     required this.title,
     required this.icon,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   State<ConsultContainer> createState() => _ConsultContainerState();

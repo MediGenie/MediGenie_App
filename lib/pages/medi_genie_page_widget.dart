@@ -13,7 +13,7 @@ import 'package:flutter/material.dart';
 export '../model/medi_genie_page_model.dart';
 
 class MediGeniePageWidget extends StatefulWidget {
-  const MediGeniePageWidget({Key? key}) : super(key: key);
+  const MediGeniePageWidget({super.key});
 
   @override
   _MediGeniePageWidgetState createState() => _MediGeniePageWidgetState();

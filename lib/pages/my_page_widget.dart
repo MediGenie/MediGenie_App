@@ -13,7 +13,7 @@ import '../model/my_page_model.dart';
 export '../model/my_page_model.dart';
 
 class MyPageWidget extends StatefulWidget {
-  const MyPageWidget({Key? key}) : super(key: key);
+  const MyPageWidget({super.key});
 
   @override
   _MyPageWidgetState createState() => _MyPageWidgetState();

@@ -8,10 +8,9 @@ import 'package:provider/provider.dart';
 class GenderInputPageWidget extends StatefulWidget {
   final PageController pageController;
   const GenderInputPageWidget({
-    Key? key,
+    super.key,
     required PageController pageController,
-  })  : pageController = pageController,
-        super(key: key);
+  })  : pageController = pageController;
 
   @override
   State<GenderInputPageWidget> createState() => _GenderInputPageWidgetState();

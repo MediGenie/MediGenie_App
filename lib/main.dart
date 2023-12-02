@@ -103,7 +103,7 @@ class MyHttpOverrides extends HttpOverrides {
 }
 
 class NavBarPage extends StatefulWidget {
-  const NavBarPage({Key? key, this.initialPage, this.page}) : super(key: key);
+  const NavBarPage({super.key, this.initialPage, this.page});
 
   final String? initialPage;
   final Widget? page;
@@ -158,7 +158,7 @@ class _NavBarPageState extends State<NavBarPage> {
           borderRadius: 24.0,
           itemBorderRadius: 8.0,
           margin: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 7.0),
+          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
           width: double.infinity,
           elevation: 0.0,
           items: [

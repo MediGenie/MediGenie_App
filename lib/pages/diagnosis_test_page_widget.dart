@@ -14,12 +14,11 @@ class DiagnosisTestPageWidget extends StatefulWidget {
   String? selectDiagnosisCategory;
   String? selectDiagnosisSubject;
   DiagnosisTestPageWidget(
-      {Key? key,
+      {super.key,
       String? heroRecommandIndex,
       String? selectDiagnosisIndex,
       String? selectDiagnosisCategory,
-      String? selectDiagnosisSubject})
-      : super(key: key) {
+      String? selectDiagnosisSubject}) {
     this.heroRecommandIndex = heroRecommandIndex;
     this.selectDiagnosisIndex = selectDiagnosisIndex;
     this.selectDiagnosisCategory = selectDiagnosisCategory;

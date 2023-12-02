@@ -10,10 +10,9 @@ import 'package:provider/provider.dart';
 class AgeInputPageWidget extends StatefulWidget {
   final PageController pageController;
   const AgeInputPageWidget({
-    Key? key,
+    super.key,
     required PageController pageController,
-  })  : pageController = pageController,
-        super(key: key);
+  })  : pageController = pageController;
 
   @override
   State<AgeInputPageWidget> createState() => _AgeInputPageWidgetState();

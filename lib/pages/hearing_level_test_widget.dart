@@ -8,10 +8,9 @@ import 'package:provider/provider.dart';
 class HearingLevelTestWidget extends StatefulWidget {
   final PageController pageController;
   const HearingLevelTestWidget({
-    Key? key,
+    super.key,
     required PageController pageController,
-  })  : pageController = pageController,
-        super(key: key);
+  })  : pageController = pageController;
 
   @override
   State<HearingLevelTestWidget> createState() => _HearingLevelTestWidgetState();

@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
 class SplashPageWidget extends StatefulWidget {
-  const SplashPageWidget({Key? key}) : super(key: key);
+  const SplashPageWidget({super.key});
 
   @override
   _SplashPageWidgetState createState() => _SplashPageWidgetState();

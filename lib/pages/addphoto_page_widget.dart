@@ -25,9 +25,9 @@ export '../model/question_page_model.dart';
 class AddPhotoPageWidget extends StatefulWidget {
   String? orderIndex;
   AddPhotoPageWidget({
-    Key? key,
+    super.key,
     String? orderIndex,
-  }) : super(key: key) {
+  }) {
     this.orderIndex = orderIndex;
   }
 
@@ -740,10 +740,10 @@ class ConsultContainer extends StatefulWidget {
   bool isPressed = false;
 
   ConsultContainer({
-    Key? key,
+    super.key,
     required this.index,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   State<ConsultContainer> createState() => _ConsultContainerState();
