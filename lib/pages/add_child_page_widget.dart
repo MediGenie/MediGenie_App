@@ -22,10 +22,9 @@ class AddChildPageWidget extends StatefulWidget {
 
   const AddChildPageWidget({
     super.key,
-    String? termTime,
-    String? privacyTime,
-  })  : termTime = termTime,
-        privacyTime = privacyTime;
+    this.termTime,
+    this.privacyTime,
+  });
 
   @override
   _AddChildPageWidgetState createState() => _AddChildPageWidgetState();

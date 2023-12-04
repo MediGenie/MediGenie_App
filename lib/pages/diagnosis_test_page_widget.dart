@@ -13,17 +13,7 @@ class DiagnosisTestPageWidget extends StatefulWidget {
   String? selectDiagnosisIndex;
   String? selectDiagnosisCategory;
   String? selectDiagnosisSubject;
-  DiagnosisTestPageWidget(
-      {super.key,
-      String? heroRecommandIndex,
-      String? selectDiagnosisIndex,
-      String? selectDiagnosisCategory,
-      String? selectDiagnosisSubject}) {
-    this.heroRecommandIndex = heroRecommandIndex;
-    this.selectDiagnosisIndex = selectDiagnosisIndex;
-    this.selectDiagnosisCategory = selectDiagnosisCategory;
-    this.selectDiagnosisSubject = selectDiagnosisSubject;
-  }
+  DiagnosisTestPageWidget({super.key, this.heroRecommandIndex, this.selectDiagnosisIndex, this.selectDiagnosisCategory, this.selectDiagnosisSubject});
 
   @override
   State<DiagnosisTestPageWidget> createState() => _DiagnosisTestPageWidgetState();
@@ -38,7 +28,6 @@ class _DiagnosisTestPageWidgetState extends State<DiagnosisTestPageWidget> with 
 
     super.initState();
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -62,16 +51,14 @@ class _DiagnosisTestPageWidgetState extends State<DiagnosisTestPageWidget> with 
           children: [
             Transform.translate(
               offset: const Offset(0, -kToolbarHeight),
-              child: Container(
-                child: Hero(
-                  tag: heroRecommandIndex,
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: Image.asset(
-                      'assets/images/img_card_${dm.getDiagosisModel('${widget.selectDiagnosisCategory}', selectDiagnosisIndex).diagnosisCategory}.png',
-                      fit: BoxFit.fitWidth,
-                      alignment: Alignment.topCenter,
-                    ),
+              child: Hero(
+                tag: heroRecommandIndex,
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Image.asset(
+                    'assets/images/img_card_${dm.getDiagosisModel('${widget.selectDiagnosisCategory}', selectDiagnosisIndex).diagnosisCategory}.png',
+                    fit: BoxFit.fitWidth,
+                    alignment: Alignment.topCenter,
                   ),
                 ),
               ),
@@ -111,52 +98,48 @@ class _DiagnosisTestPageWidgetState extends State<DiagnosisTestPageWidget> with 
             ),
             Padding(
               padding: const EdgeInsets.all(20),
-              child: Container(
-                child: Column(
-                  verticalDirection: VerticalDirection.up,
-                  children: [
-                    FFButtonWidget(
-                      onPressed: () async {
-                        if (dm.userModel!.userFamilyMemberModels!.isNotEmpty) {
-                          await showModalBottomSheet(
-                              context: context,
-                              shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(40))),
-                              builder: (context) => UserSelectComponenetWidget());
-                        }
-                        // 문진 json 데이터 로딩
-                        await dm.dignosisDataLoading(
-                          context,
-                          dm.getDiagosisModel(widget.selectDiagnosisCategory!, int.parse(widget.selectDiagnosisIndex!)).jsonLink!,
-                          widget.selectDiagnosisCategory!,
-                          widget.selectDiagnosisSubject!,
-                        );
-                        await context.pushNamed(
-                          dm.getNextDiagnosisPageName(0),
-                          queryParameters: {
-                            'orderIndex': '1',
-                          },
-                        );
-                      },
-                      text: Strings.appStart.tr(),
-                      options: FFButtonOptions(
-                        width: double.infinity,
-                        height: 56.0,
-                        color: FlutterFlowTheme.of(context).primary,
-                        textStyle: FlutterFlowTheme.of(context).labelLarge.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              color: FlutterFlowTheme.of(context).tertiaryText,
-                            ),
-                        elevation: 0.0,
-                        borderSide: const BorderSide(
-                          color: Colors.transparent,
-                          width: 0.0,
-                        ),
-                        borderRadius: BorderRadius.circular(16.0),
+              child: Column(
+                verticalDirection: VerticalDirection.up,
+                children: [
+                  FFButtonWidget(
+                    onPressed: () async {
+                      if (dm.userModel!.userFamilyMemberModels!.isNotEmpty) {
+                        await showModalBottomSheet(
+                            context: context, shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(40))), builder: (context) => UserSelectComponenetWidget());
+                      }
+                      // 문진 json 데이터 로딩
+                      await dm.dignosisDataLoading(
+                        context,
+                        dm.getDiagosisModel(widget.selectDiagnosisCategory!, int.parse(widget.selectDiagnosisIndex!)).jsonLink!,
+                        widget.selectDiagnosisCategory!,
+                        widget.selectDiagnosisSubject!,
+                      );
+                      await context.pushNamed(
+                        dm.getNextDiagnosisPageName(0),
+                        queryParameters: {
+                          'orderIndex': '1',
+                        },
+                      );
+                    },
+                    text: Strings.appStart.tr(),
+                    options: FFButtonOptions(
+                      width: double.infinity,
+                      height: 56.0,
+                      color: FlutterFlowTheme.of(context).primary,
+                      textStyle: FlutterFlowTheme.of(context).labelLarge.override(
+                            fontFamily: 'Plus Jakarta Sans',
+                            color: FlutterFlowTheme.of(context).tertiaryText,
+                          ),
+                      elevation: 0.0,
+                      borderSide: const BorderSide(
+                        color: Colors.transparent,
+                        width: 0.0,
                       ),
-                      showLoadingIndicator: false,
+                      borderRadius: BorderRadius.circular(16.0),
                     ),
-                  ],
-                ),
+                    showLoadingIndicator: false,
+                  ),
+                ],
               ),
             ),
           ],

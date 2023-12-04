@@ -46,8 +46,9 @@ dependencies:
   floating_bottom_navigation_bar: 1.5.2
   flutter_animate: 4.3.0
   flutter_cache_manager: 3.3.1
+  flutter_chat_ui: ^1.6.10
   flutter_downloader: ^1.11.5
-  flutter_inappwebview: ^6.0.0-beta.24+1
+  flutter_inappwebview: ^6.0.0-beta.30
   flutter_launcher_icons: 0.13.1
   flutter_local_notifications: ^16.2.0
   flutter_native_splash: ^2.3.6
@@ -112,7 +113,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^2.4.7
-  easy_localization_generator: ^0.3.1
+  easy_localization_generator: ^0.3.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

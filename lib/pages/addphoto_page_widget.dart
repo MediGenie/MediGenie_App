@@ -26,10 +26,8 @@ class AddPhotoPageWidget extends StatefulWidget {
   String? orderIndex;
   AddPhotoPageWidget({
     super.key,
-    String? orderIndex,
-  }) {
-    this.orderIndex = orderIndex;
-  }
+    this.orderIndex,
+  });
 
   @override
   _AddPhotoPageWidgetState createState() => _AddPhotoPageWidgetState();

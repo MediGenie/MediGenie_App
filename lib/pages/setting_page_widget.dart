@@ -9,8 +9,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import '../model/setting_page_model.dart';
-export '../model/setting_page_model.dart';
 
 class SettingPageWidget extends StatefulWidget {
   const SettingPageWidget({super.key});
@@ -20,29 +18,21 @@ class SettingPageWidget extends StatefulWidget {
 }
 
 class _SettingPageWidgetState extends State<SettingPageWidget> {
-  late SettingPageModel _model;
-
   final scaffoldKey = GlobalKey<ScaffoldState>();
-  final _unfocusNode = FocusNode();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => SettingPageModel());
   }
 
   @override
   void dispose() {
-    _model.dispose();
-
-    _unfocusNode.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,

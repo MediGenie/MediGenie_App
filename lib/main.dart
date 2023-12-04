@@ -5,6 +5,7 @@ import 'package:easy_localization_loader/easy_localization_loader.dart';
 import 'package:flutter/material.dart';
 import 'package:medi_genie/backend/api_requests/api_manager.dart';
 import 'package:medi_genie/localization/strings.dart';
+import 'package:medi_genie/pages/ai_chat_page_widget.dart';
 import 'package:medi_genie/provider/input_userinfo.dart';
 import 'package:medi_genie/provider/mypage_info.dart';
 import 'package:provider/provider.dart';
@@ -60,10 +61,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
-
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
+  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
   @override
   void initState() {
@@ -115,8 +115,8 @@ class NavBarPage extends StatefulWidget {
 
 /// This is the private State class that goes with NavBarPage.
 class _NavBarPageState extends State<NavBarPage> {
-  String _currentPageName = 'MediGeniePage';
   late Widget? _currentPage;
+  String _currentPageName = 'MediGeniePage';
 
   @override
   void initState() {
@@ -129,7 +129,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'MediGeniePage': const MediGeniePageWidget(),
-      'DiagosisPage': const DiagosisPageWidget(),
+      'DiagosisPage': const AiChatPageWidget(),
       'MyPage': const MyPageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
