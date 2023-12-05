@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:medi_genie/localization/strings.dart';
 import 'package:medi_genie/manager/dataManager.dart';
+import 'package:medi_genie/manager/inappBrowserManager.dart';
 import 'package:medi_genie/manager/socialManager.dart';
 import 'package:medi_genie/manager/uiManager.dart';
 
@@ -82,7 +83,7 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           alignment: const AlignmentDirectional(-0.85, 0.0),
                           child: FFButtonWidget(
                             onPressed: () {
-                              print('Button pressed ...');
+                              InAppBrowserManager.getInstance().openBrowser(url: "https://medigenie.ai/terms-conditions");
                             },
                             text: Strings.appTermsService.tr(),
                             options: FFButtonOptions(
@@ -114,7 +115,8 @@ class _SettingPageWidgetState extends State<SettingPageWidget> {
                           alignment: const AlignmentDirectional(-0.85, 0.0),
                           child: FFButtonWidget(
                             onPressed: () {
-                              print('Button pressed ...');
+                              InAppBrowserManager.getInstance().openBrowser(url: "https://medigenie.ai/privacy-policy");
+                              //print('Button pressed ...');
                             },
                             text: Strings.appPrivacyPolicy.tr(),
                             options: FFButtonOptions(

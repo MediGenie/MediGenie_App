@@ -82,7 +82,7 @@ class _MyPageWidgetState extends State<MyPageWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
                   child: Column(
                     children: [
-                      if (dm.isLogin) userInfoContainer(context) else signInContainer(context),
+                      if (true) userInfoContainer(context) else signInContainer(context),
                     ],
                   ),
                 );
@@ -100,143 +100,142 @@ class _MyPageWidgetState extends State<MyPageWidget> {
 
   Widget userInfoContainer(BuildContext context) {
     return Expanded(
-      child: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).tertiaryText,
+                borderRadius: BorderRadius.circular(20.0),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 0.0, 24.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '${dm.userModel!.username?.substring(0, 8)}',
+                          textAlign: TextAlign.start,
+                          overflow: TextOverflow.clip,
+                          style: FlutterFlowTheme.of(context).headlineMedium,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          //    ${dm.userModel!.userPersnalInfoMedel!.ageCategory ?? 'YOUNG_ADULT'}'
+                          ('app_${dm.userModel!.userPersnalInfoMedel!.gender ?? 'gender'}').tr(),
+                          textAlign: TextAlign.start,
+                          style: FlutterFlowTheme.of(context).labelSmall,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        if (dm.userModel!.userFamilyMemberModels!.isNotEmpty)
+                          Text(
+                            Strings.appChild.tr(),
+                            style: FlutterFlowTheme.of(context).headlineSmall,
+                          ),
+                        if (dm.userModel!.userFamilyMemberModels!.isNotEmpty)
+                          const SizedBox(
+                            height: 12,
+                          ),
+                        SizedBox(
+                          height: 40,
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                for (UserFamilyMemberModel member in dm.userModel!.userFamilyMemberModels!) profileChildListContainer(context, member.gender == 'MALE'),
+                              ],
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 24.0, 24.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(50.0),
+                      child: Image.asset(
+                        'assets/images/img_thumbnail_profile_default.png',
+                        width: 80.0,
+                        height: 80.0,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 32,
+            ),
+            ClipRRect(
+              child: Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).tertiaryText,
-                  borderRadius: BorderRadius.circular(20.0),
+                height: 45.0,
+                decoration: const BoxDecoration(
+                  color: Color(0x00FFFFFF),
                 ),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 0.0, 24.0),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            '${dm.userModel!.username}',
-                            textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.of(context).headlineMedium,
-                          ),
-                          const SizedBox(
-                            height: 8,
-                          ),
-                          Text(
-                            //    ${dm.userModel!.userPersnalInfoMedel!.ageCategory ?? 'YOUNG_ADULT'}'
-                            ('app_${dm.userModel!.userPersnalInfoMedel!.gender ?? 'gender'}').tr(),
-                            textAlign: TextAlign.start,
-                            style: FlutterFlowTheme.of(context).labelSmall,
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          if (dm.userModel!.userFamilyMemberModels!.isNotEmpty)
-                            Text(
-                              Strings.appChild.tr(),
-                              style: FlutterFlowTheme.of(context).headlineSmall,
-                            ),
-                          if (dm.userModel!.userFamilyMemberModels!.isNotEmpty)
-                            const SizedBox(
-                              height: 12,
-                            ),
-                          SizedBox(
-                            height: 40,
-                            child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  for (UserFamilyMemberModel member in dm.userModel!.userFamilyMemberModels!) profileChildListContainer(context, member.gender == 'MALE'),
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 24.0, 24.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50.0),
-                        child: Image.asset(
-                          'assets/images/img_thumbnail_profile_default.png',
-                          width: 80.0,
-                          height: 80.0,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(
-                height: 32,
-              ),
-              ClipRRect(
-                child: Container(
-                  width: double.infinity,
-                  height: 45.0,
-                  decoration: const BoxDecoration(
-                    color: Color(0x00FFFFFF),
-                  ),
-                  alignment: const AlignmentDirectional(0.0, 0.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      FFButtonWidget(
-                        onPressed: () {
-                          print('Button pressed ...');
-                        },
-                        text: Strings.appAll.tr(),
-                        icon: Image.asset('assets/images/imageicon/img_ic_doctor.png', width: 20.0, height: 20.0),
-                        options: FFButtonOptions(
-                          elevation: 0,
-                          width: 86.0,
-                          height: 46.0,
-                          color: FlutterFlowTheme.of(context).primary,
-                          textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Plus Jakarta Sans',
-                                color: Colors.white,
-                              ),
-                          borderSide: const BorderSide(
-                            color: Colors.transparent,
-                            width: 1.0,
-                          ),
-                          borderRadius: BorderRadius.circular(100.0),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                width: double.infinity,
-                alignment: Alignment.topCenter,
-                child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    for (UserDiagnosisResultModel diagnosis in dm.userModel!.userDiagnosisResultModels!) diagnosisListItemContainer(context, diagnosis),
+                    FFButtonWidget(
+                      onPressed: () {
+                        print('Button pressed ...');
+                      },
+                      text: Strings.appAll.tr(),
+                      icon: Image.asset('assets/images/imageicon/img_ic_doctor.png', width: 20.0, height: 20.0),
+                      options: FFButtonOptions(
+                        elevation: 0,
+                        width: 86.0,
+                        height: 46.0,
+                        color: FlutterFlowTheme.of(context).primary,
+                        textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                              fontFamily: 'Plus Jakarta Sans',
+                              color: Colors.white,
+                            ),
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(100.0),
+                      ),
+                    ),
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Container(
+              width: double.infinity,
+              alignment: Alignment.topCenter,
+              child: Column(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  for (UserDiagnosisResultModel diagnosis in dm.userModel!.userDiagnosisResultModels!) diagnosisListItemContainer(context, diagnosis),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -416,8 +415,8 @@ class _MyPageWidgetState extends State<MyPageWidget> {
   void loginComplete(bool isSuccess) {
     if (dm.userModel!.userPersnalInfoMedel!.gender == null && isSuccess) {
       context.pushNamed('TermsOfServicePage');
-      setState(() {});
     }
+    setState(() {});
   }
 
   Future<void> _onDataInputCheck() async {
