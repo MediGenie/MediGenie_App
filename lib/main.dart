@@ -129,7 +129,7 @@ class _NavBarPageState extends State<NavBarPage> {
   Widget build(BuildContext context) {
     final tabs = {
       'MediGeniePage': const MediGeniePageWidget(),
-      'DiagosisPage': const AiChatPageWidget(),
+      'DiagosisPage': const DiagosisPageWidget(),
       'MyPage': const MyPageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
