@@ -1,4 +1,3 @@
-// import 'package:audioplayers/audioplayers.dart';
 import 'dart:math';
 
 import 'package:card_swiper/card_swiper.dart';
@@ -144,99 +143,85 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                   _selectPage = index;
                                   UIManager.getInstance().clearCurrentDiagnosis();
                                   // 진단 전체 데이터 저장
-                                  UIManager.getInstance().currentDiagnosis!.diagnosisId = dm.getRecommandModel(index).diagnosis!.id;
+                                  UIManager.getInstance().currentDiagnosis!.diagnosisId = dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.id;
                                   // json 진단 데이터 불러오기
                                   await dm.dignosisDataLoading(
                                     context,
-                                    dm.getRecommandModel(index).diagnosis!.jsonLink!,
-                                    dm.getRecommandModel(index).diagnosis!.diagnosisCategory!,
-                                    dm.getRecommandModel(index).diagnosis!.subject!,
+                                    dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.jsonLink!,
+                                    dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.diagnosisCategory!,
+                                    dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.subject!,
                                   );
                                   // monet brain 사이트 일때 브라우저로 이동
-                                  if (dm.getRecommandModel(index).diagnosis!.jsonLink!.contains('monetbrain')) {
-                                    InAppBrowserManager.getInstance().openBrowser(url: dm.getRecommandModel(index).diagnosis!.jsonLink!);
+                                  if (dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.jsonLink!.contains('monetbrain')) {
+                                    InAppBrowserManager.getInstance().openBrowser(url: dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.jsonLink!);
                                     // comingsoon 일때 준비중 알림
-                                  } else if (dm.getRecommandModel(index).diagnosis!.jsonLink!.contains('comingsoon')) {
-                                    // ignore: use_build_context_synchronously
-                                    UIManager.getInstance().alertOneButtonShow(
-                                      context,
-                                      Strings.appComingTitle.tr(),
-                                      Strings.appComingDec.tr(),
-                                      'Okey',
-                                      () => null,
-                                    );
-                                    // json 파일 불러와서 진단 페이지로 이동
                                   } else {
                                     // ignore: use_build_context_synchronously
                                     await context.pushNamed('DiagnosisTestPage', queryParameters: {
-                                      'heroRecommandIndex': '$index',
-                                      'selectDiagnosisIndex': '${dm.getRecommandModel(index).diagnosis!.id}',
-                                      'selectDiagnosisCategory': '${dm.getRecommandModel(index).diagnosis!.diagnosisCategory}',
-                                      'selectDiagnosisSubject': '${dm.getRecommandModel(index).diagnosis!.subject}',
+                                      'heroRecommandIndex': '$index == 0 ? 0 : 3',
+                                      'selectDiagnosisIndex': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.id}',
+                                      'selectDiagnosisCategory': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.diagnosisCategory}',
+                                      'selectDiagnosisSubject': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.subject}',
                                     });
                                   }
                                 },
                                 itemBuilder: (BuildContext context, int index) {
-                                  if (index == 1 || index == 2) {
-                                    return const SizedBox.shrink();
-                                  } else {
-                                    return Container(
-                                      clipBehavior: Clip.hardEdge,
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(20),
-                                      ),
-                                      child: Stack(
-                                        fit: StackFit.expand,
-                                        children: [
-                                          Hero(
-                                            tag: index,
-                                            child: Image.asset(
-                                              'assets/images/img_card_${dm.getRecommandModel(index).diagnosis?.diagnosisCategory}.png',
-                                              fit: BoxFit.cover,
-                                              alignment: Alignment.topCenter,
-                                            ),
+                                  return Container(
+                                    clipBehavior: Clip.hardEdge,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                    ),
+                                    child: Stack(
+                                      fit: StackFit.expand,
+                                      children: [
+                                        Hero(
+                                          tag: index,
+                                          child: Image.asset(
+                                            'assets/images/img_card_${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis?.diagnosisCategory}.png',
+                                            fit: BoxFit.cover,
+                                            alignment: Alignment.topCenter,
                                           ),
-                                          Padding(
-                                            padding: const EdgeInsets.all(20.0),
-                                            child: SizedBox(
-                                              width: 230,
-                                              height: double.infinity,
-                                              child: Column(
-                                                mainAxisAlignment: MainAxisAlignment.end,
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  SizedBox(
-                                                    width: 230,
-                                                    child: Text(
-                                                      '${dm.getRecommandModel(index).title}'.tr(),
-                                                      textAlign: TextAlign.left,
-                                                      style: FlutterFlowTheme.of(context).displaySmall,
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 12,
-                                                  ),
-                                                  SizedBox(
-                                                    width: 230,
-                                                    child: Text(
-                                                      '${dm.getRecommandModel(index).diagnosis?.diagnosisDuration} ${Strings.appMinute.tr()}',
-                                                      textAlign: TextAlign.left,
-                                                      style: FlutterFlowTheme.of(context).bodyMedium,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          ),
-                                          Container(
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(20.0),
+                                          child: SizedBox(
                                             width: 230,
                                             height: double.infinity,
-                                            margin: const EdgeInsetsDirectional.fromSTEB(20.0, 250.0, 20.0, 0.0),
+                                            child: Column(
+                                              mainAxisAlignment: MainAxisAlignment.end,
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                SizedBox(
+                                                  width: 230,
+                                                  child: Text(
+                                                    '${dm.getRecommandModel(index == 0 ? 0 : 3).title}'.tr(),
+                                                    textAlign: TextAlign.left,
+                                                    style: FlutterFlowTheme.of(context).displaySmall,
+                                                  ),
+                                                ),
+                                                const SizedBox(
+                                                  height: 12,
+                                                ),
+                                                SizedBox(
+                                                  width: 230,
+                                                  child: Text(
+                                                    '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis?.diagnosisDuration} ${Strings.appMinute.tr()}',
+                                                    textAlign: TextAlign.left,
+                                                    style: FlutterFlowTheme.of(context).bodyMedium,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
-                                        ],
-                                      ),
-                                    );
-                                  }
+                                        ),
+                                        Container(
+                                          width: 230,
+                                          height: double.infinity,
+                                          margin: const EdgeInsetsDirectional.fromSTEB(20.0, 250.0, 20.0, 0.0),
+                                        ),
+                                      ],
+                                    ),
+                                  );
                                 },
                                 itemCount: 2,
                                 viewportFraction: 0.75,
