@@ -156,9 +156,10 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                     InAppBrowserManager.getInstance().openBrowser(url: dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.jsonLink!);
                                     // comingsoon 일때 준비중 알림
                                   } else {
+                                    int result = index == 0 ? 0 : 3;
                                     // ignore: use_build_context_synchronously
                                     await context.pushNamed('DiagnosisTestPage', queryParameters: {
-                                      'heroRecommandIndex': '$index == 0 ? 0 : 3',
+                                      'heroRecommandIndex': '$result',
                                       'selectDiagnosisIndex': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.id}',
                                       'selectDiagnosisCategory': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.diagnosisCategory}',
                                       'selectDiagnosisSubject': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.subject}',

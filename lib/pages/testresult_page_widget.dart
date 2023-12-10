@@ -22,12 +22,10 @@ import '../backend/stream_client.dart';
 class TestResultPageWidget extends StatefulWidget {
   String? index;
   String? result;
-  TestResultPageWidget({super.key, String? index, String? result}) {
-    this.index = index;
-    this.result = result;
-  }
+  TestResultPageWidget({super.key, this.index, this.result});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TestResultPageWidgetState createState() => _TestResultPageWidgetState();
 }
 
