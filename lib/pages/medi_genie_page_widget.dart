@@ -1,4 +1,6 @@
 // import 'package:audioplayers/audioplayers.dart';
+import 'dart:math';
+
 import 'package:card_swiper/card_swiper.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:medi_genie/flutter_flow/flutter_flow_util.dart';
@@ -140,7 +142,6 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                 index: _selectPage,
                                 onTap: (index) async {
                                   _selectPage = index;
-                                  //await DataManager.getInstance().dignosisDataLoading(dm.),
                                   UIManager.getInstance().clearCurrentDiagnosis();
                                   // 진단 전체 데이터 저장
                                   UIManager.getInstance().currentDiagnosis!.diagnosisId = dm.getRecommandModel(index).diagnosis!.id;
@@ -156,6 +157,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                     InAppBrowserManager.getInstance().openBrowser(url: dm.getRecommandModel(index).diagnosis!.jsonLink!);
                                     // comingsoon 일때 준비중 알림
                                   } else if (dm.getRecommandModel(index).diagnosis!.jsonLink!.contains('comingsoon')) {
+                                    // ignore: use_build_context_synchronously
                                     UIManager.getInstance().alertOneButtonShow(
                                       context,
                                       Strings.appComingTitle.tr(),
@@ -165,6 +167,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                     );
                                     // json 파일 불러와서 진단 페이지로 이동
                                   } else {
+                                    // ignore: use_build_context_synchronously
                                     await context.pushNamed('DiagnosisTestPage', queryParameters: {
                                       'heroRecommandIndex': '$index',
                                       'selectDiagnosisIndex': '${dm.getRecommandModel(index).diagnosis!.id}',
@@ -174,64 +177,68 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                   }
                                 },
                                 itemBuilder: (BuildContext context, int index) {
-                                  return Container(
-                                    clipBehavior: Clip.hardEdge,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                    ),
-                                    child: Stack(
-                                      fit: StackFit.expand,
-                                      children: [
-                                        Hero(
-                                          tag: index,
-                                          child: Image.asset(
-                                            'assets/images/img_card_${dm.getRecommandModel(index).diagnosis?.diagnosisCategory}.png',
-                                            fit: BoxFit.cover,
-                                            alignment: Alignment.topCenter,
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(20.0),
-                                          child: SizedBox(
-                                            width: 230,
-                                            height: double.infinity,
-                                            child: Column(
-                                              mainAxisAlignment: MainAxisAlignment.end,
-                                              crossAxisAlignment: CrossAxisAlignment.start,
-                                              children: [
-                                                SizedBox(
-                                                  width: 230,
-                                                  child: Text(
-                                                    '${dm.getRecommandModel(index).title}'.tr(),
-                                                    textAlign: TextAlign.left,
-                                                    style: FlutterFlowTheme.of(context).displaySmall,
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  height: 12,
-                                                ),
-                                                SizedBox(
-                                                  width: 230,
-                                                  child: Text(
-                                                    '${dm.getRecommandModel(index).diagnosis?.diagnosisDuration} ${Strings.appMinute.tr()}',
-                                                    textAlign: TextAlign.left,
-                                                    style: FlutterFlowTheme.of(context).bodyMedium,
-                                                  ),
-                                                ),
-                                              ],
+                                  if (index == 1 || index == 2) {
+                                    return const SizedBox.shrink();
+                                  } else {
+                                    return Container(
+                                      clipBehavior: Clip.hardEdge,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(20),
+                                      ),
+                                      child: Stack(
+                                        fit: StackFit.expand,
+                                        children: [
+                                          Hero(
+                                            tag: index,
+                                            child: Image.asset(
+                                              'assets/images/img_card_${dm.getRecommandModel(index).diagnosis?.diagnosisCategory}.png',
+                                              fit: BoxFit.cover,
+                                              alignment: Alignment.topCenter,
                                             ),
                                           ),
-                                        ),
-                                        Container(
-                                          width: 230,
-                                          height: double.infinity,
-                                          margin: const EdgeInsetsDirectional.fromSTEB(20.0, 250.0, 20.0, 0.0),
-                                        ),
-                                      ],
-                                    ),
-                                  );
+                                          Padding(
+                                            padding: const EdgeInsets.all(20.0),
+                                            child: SizedBox(
+                                              width: 230,
+                                              height: double.infinity,
+                                              child: Column(
+                                                mainAxisAlignment: MainAxisAlignment.end,
+                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                children: [
+                                                  SizedBox(
+                                                    width: 230,
+                                                    child: Text(
+                                                      '${dm.getRecommandModel(index).title}'.tr(),
+                                                      textAlign: TextAlign.left,
+                                                      style: FlutterFlowTheme.of(context).displaySmall,
+                                                    ),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 12,
+                                                  ),
+                                                  SizedBox(
+                                                    width: 230,
+                                                    child: Text(
+                                                      '${dm.getRecommandModel(index).diagnosis?.diagnosisDuration} ${Strings.appMinute.tr()}',
+                                                      textAlign: TextAlign.left,
+                                                      style: FlutterFlowTheme.of(context).bodyMedium,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            width: 230,
+                                            height: double.infinity,
+                                            margin: const EdgeInsetsDirectional.fromSTEB(20.0, 250.0, 20.0, 0.0),
+                                          ),
+                                        ],
+                                      ),
+                                    );
+                                  }
                                 },
-                                itemCount: DataManager.getInstance().getRecommandModelLength(),
+                                itemCount: 2,
                                 viewportFraction: 0.75,
                                 scale: 0.75,
                               ),
@@ -252,6 +259,6 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
 
   // ignore: non_constant_identifier_names
   void onClickDiagnosis(int index) {
-    print(index);
+    log(index);
   }
 }
