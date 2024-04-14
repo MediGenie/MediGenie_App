@@ -54,7 +54,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
           title: Align(
             alignment: const AlignmentDirectional(-1.0, 0.0),
             child: Text(
-              'MediEar',
+              'MediEar Plus',
               textAlign: TextAlign.start,
               style: FlutterFlowTheme.of(context).titleLarge,
             ),
@@ -143,26 +143,26 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                   _selectPage = index;
                                   UIManager.getInstance().clearCurrentDiagnosis();
                                   // 진단 전체 데이터 저장
-                                  UIManager.getInstance().currentDiagnosis!.diagnosisId = dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.id;
+                                  UIManager.getInstance().currentDiagnosis!.diagnosisId = dm.getRecommandModel(index).diagnosis!.id;
                                   // json 진단 데이터 불러오기
                                   await dm.dignosisDataLoading(
                                     context,
-                                    dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.jsonLink!,
-                                    dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.diagnosisCategory!,
-                                    dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.subject!,
+                                    dm.getRecommandModel(index).diagnosis!.jsonLink!,
+                                    dm.getRecommandModel(index).diagnosis!.diagnosisCategory!,
+                                    dm.getRecommandModel(index).diagnosis!.subject!,
                                   );
                                   // monet brain 사이트 일때 브라우저로 이동
-                                  if (dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.jsonLink!.contains('monetbrain')) {
-                                    InAppBrowserManager.getInstance().openBrowser(url: dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.jsonLink!);
+                                  if (dm.getRecommandModel(index).diagnosis!.jsonLink!.contains('monetbrain')) {
+                                    InAppBrowserManager.getInstance().openBrowser(url: dm.getRecommandModel(index).diagnosis!.jsonLink!);
                                     // comingsoon 일때 준비중 알림
                                   } else {
-                                    int result = index == 0 ? 0 : 3;
+                                    int result = index;
                                     // ignore: use_build_context_synchronously
                                     await context.pushNamed('DiagnosisTestPage', queryParameters: {
                                       'heroRecommandIndex': '$result',
-                                      'selectDiagnosisIndex': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.id}',
-                                      'selectDiagnosisCategory': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.diagnosisCategory}',
-                                      'selectDiagnosisSubject': '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis!.subject}',
+                                      'selectDiagnosisIndex': '${dm.getRecommandModel(index).diagnosis!.id}',
+                                      'selectDiagnosisCategory': '${dm.getRecommandModel(index).diagnosis!.diagnosisCategory}',
+                                      'selectDiagnosisSubject': '${dm.getRecommandModel(index).diagnosis!.subject}',
                                     });
                                   }
                                 },
@@ -178,7 +178,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                         Hero(
                                           tag: index,
                                           child: Image.asset(
-                                            'assets/images/img_card_${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis?.diagnosisCategory}.png',
+                                            'assets/images/img_card_${dm.getRecommandModel(index).diagnosis?.diagnosisCategory}.png',
                                             fit: BoxFit.cover,
                                             alignment: Alignment.topCenter,
                                           ),
@@ -195,7 +195,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                                 SizedBox(
                                                   width: 230,
                                                   child: Text(
-                                                    '${dm.getRecommandModel(index == 0 ? 0 : 3).title}'.tr(),
+                                                    '${dm.getRecommandModel(index).title}'.tr(),
                                                     textAlign: TextAlign.left,
                                                     style: FlutterFlowTheme.of(context).displaySmall,
                                                   ),
@@ -206,7 +206,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                                 SizedBox(
                                                   width: 230,
                                                   child: Text(
-                                                    '${dm.getRecommandModel(index == 0 ? 0 : 3).diagnosis?.diagnosisDuration} ${Strings.appMinute.tr()}',
+                                                    '${dm.getRecommandModel(index).diagnosis?.diagnosisDuration} ${Strings.appMinute.tr()}',
                                                     textAlign: TextAlign.left,
                                                     style: FlutterFlowTheme.of(context).bodyMedium,
                                                   ),
@@ -224,7 +224,7 @@ class _MediGeniePageWidgetState extends State<MediGeniePageWidget> {
                                     ),
                                   );
                                 },
-                                itemCount: 2,
+                                itemCount: 3,
                                 viewportFraction: 0.75,
                                 scale: 0.75,
                               ),

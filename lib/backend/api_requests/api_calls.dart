@@ -217,7 +217,6 @@ class PostDiagnosisResultCall {
     if (DataManager.getInstance().isLogin) {
       body = '''{
       "diagnosisId": "${info.diagnosisId}",
-      "data": ${info.historyTakingData},
       "images": ${info.images.isEmpty ? '""' : info.images},
       "earPos": "${info.earPos}",
       "average": ${info.convertAverage()},
@@ -229,7 +228,6 @@ class PostDiagnosisResultCall {
       body = '''{
       "uuid": "${DataManager.getInstance().deviceId}",
       "diagnosisId": "${info.diagnosisId}",
-      "data": ${info.historyTakingData},
       "images": ${info.images.isEmpty ? '""' : info.images},
       "earPos": "${info.earPos}",
       "average": ${info.convertAverage()},

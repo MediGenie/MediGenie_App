@@ -1,87 +1,13 @@
 {
   "startmenu": [
-    "질문에 답해주세요.",
     "사진을 추가하세요.",
     "이어폰으로 청력을 검사하세요.",
     "결과를 확인하세요."
   ],
   "testflow": {
-    "historytaking": [
-      {
-        "index": 1,
-        "title": "Question",
-        "order": 9,
-        "questions": [
-          {
-            "question": "청력에\n변화가 있나요?",
-            "answers": [
-              "네, 상당한 변화가 있습니다.",
-              "네, 약간의 변화가 있습니다.",
-              "아니오, 청력이 안정되어 있습니다."
-            ]
-          },
-          {
-            "question": "당신은\n헤드폰이나 이어폰으로\n음악을 자주 듣나요?",
-            "answers": [
-              "네, 하루에 2시간 이상 듣습니다.",
-              "네, 하루에 2시간 미만 듣습니다.",
-              "아니오, 헤드폰이나 이어폰을 거의 사용하지 않습니다."
-            ]
-          },
-          {
-            "question": "이전에 고음압적인 콘서트나\n음악 행사에 참석한 적이 있나요?",
-            "answers": [
-              "네, 자주 참석했습니다.",
-              "가끔 참석했습니다.",
-              "아니오, 한 번도 참석한 적이 없습니다."
-            ]
-          },
-          {
-            "question": "청력 보호 없이\n큰 소리에 노출된 적이 있나요? 예: 폭죽, 총기, 전동 공구 등",
-            "answers": [
-              "네, 자주 노출되었습니다.",
-              "가끔 노출되었습니다.",
-              "아니오, 한 번도 노출된 적이 없습니다."
-            ]
-          },
-          {
-            "question": "이전에 이명, 울림\n또는 다른 이유로\n귀에서 소리가 들렸던 적이 있나요?",
-            "answers": [
-              "네, 자주 그렇습니다.",
-              "가끔 그렇습니다.",
-              "아니오, 한 번도 그런 적이 없습니다."
-            ]
-          },
-          {
-            "question": "지난 일년 동안\n귀 감염이나 귀와 관련된\n문제가 있었나요?",
-            "answers": [
-              "네, 자주 그랬습니다.",
-              "가끔 그랬습니다.",
-              "아니오, 귀에 문제가 없었습니다."
-            ]
-          },
-          {
-            "question": "솜이나 다른 것으로\n귀를 청소한 적이 있나요?",
-            "answers": [
-              "네, 자주 그랬습니다.",
-              "가끔 그랬습니다.",
-              "아니오, 귀를 청소하는데 사용하지 않습니다."
-            ]
-          },
-          {
-            "question": "현재 청력이나 균형에\n영향을 줄 수 있는\n약물을 복용 중이신가요?",
-            "answers": ["네", "아니오"]
-          },
-          {
-            "question": "청력 테스트나 검사를\n받은 적이 있나요?",
-            "answers": ["네", "아니오"]
-          }
-        ]
-      }
-    ],
     "addphoto": [
       {
-        "index": 2,
+        "index": 1,
         "title": "Add photo",
         "category": "ear",
         "questions": [
@@ -115,25 +41,25 @@
               {
                 "frequency": 500,
                 "volume": 1,
-                "step": 5,
+                "step": 1,
                 "status": "not tested"
               },
               {
                 "frequency": 1000,
                 "volume": 1,
-                "step": 5,
+                "step": 2,
                 "status": "not tested"
               },
               {
                 "frequency": 2000,
                 "volume": 1,
-                "step": 5,
+                "step": 3,
                 "status": "not tested"
               },
               {
                 "frequency": 4000,
                 "volume": 1,
-                "step": 5,
+                "step": 4,
                 "status": "not tested"
               }
             ]
@@ -152,25 +78,25 @@
               {
                 "frequency": 500,
                 "volume": 1,
-                "step": 5,
+                "step": 1,
                 "status": "not tested"
               },
               {
                 "frequency": 1000,
                 "volume": 1,
-                "step": 5,
+                "step": 2,
                 "status": "not tested"
               },
               {
                 "frequency": 2000,
                 "volume": 1,
-                "step": 5,
+                "step": 3,
                 "status": "not tested"
               },
               {
                 "frequency": 4000,
                 "volume": 1,
-                "step": 5,
+                "step": 4,
                 "status": "not tested"
               }
             ]
@@ -185,7 +111,7 @@
     ],
     "results": [
       {
-        "index": 4,
+        "index": 3,
         "title": "Result",
         "diagnosesresult": [
           {

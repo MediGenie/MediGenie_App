@@ -484,7 +484,7 @@ class _HearingTestPageWidgetState extends State<HearingTestPageWidget> {
               ),
               FFButtonWidget(
                 onPressed: () async {
-                  if (mainVolume == 0 && !isHearingStart) hearingTestSoundStart(audioModel.step!);
+                  if (mainVolume == 0 && !isHearingStart) hearingTestSoundStart(audioModel.step! - 1);
                   if (mainVolume <= 90) mainVolume += 10;
                   mainVolumeControl(mainVolume);
                   setState(() {});
