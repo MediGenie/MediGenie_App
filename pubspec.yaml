@@ -42,7 +42,7 @@ dependencies:
   easy_localization_loader: 2.0.0
   equatable: 2.0.5
   fetch_client: ^1.0.2
-  fl_chart: ^0.65.0
+  fl_chart: ^0.67.0
   floating_bottom_navigation_bar: 1.5.2
   flutter_animate: 4.3.0
   flutter_cache_manager: 3.3.1

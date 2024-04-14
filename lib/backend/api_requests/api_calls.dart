@@ -230,9 +230,9 @@ class PostDiagnosisResultCall {
       "diagnosisId": "${info.diagnosisId}",
       "images": ${info.images.isEmpty ? '""' : info.images},
       "earPos": "${info.earPos}",
-      "average": ${info.convertAverage()},
-      "right": ${info.convertRight()},
-      "left": ${info.convertLeft()},
+      "average": ${info.average.isEmpty ? '""' : info.convertAverage()},
+      "right": ${info.right.isEmpty ? '""' : info.convertRight()},
+      "left": ${info.left.isEmpty ? '""' : info.convertLeft()},
       "memberId": ${info.memberId}
     }''';
     }

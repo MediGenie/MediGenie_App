@@ -8,7 +8,9 @@ import 'package:medi_genie/components/login_popup_widget.dart';
 import 'package:medi_genie/flutter_flow/flutter_flow_widgets.dart';
 import 'package:medi_genie/localization/strings.dart';
 import 'package:medi_genie/manager/dataManager.dart';
+import 'package:medi_genie/manager/uiManager.dart';
 import 'package:medi_genie/model/testing_model.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -580,6 +582,7 @@ class _TestResultPageWidgetState extends State<TestResultPageWidget> {
   }
 
   Container audiogramContainer(BuildContext context) {
+    List<int> xKeys = UIManager.getInstance().currentDiagnosis!.right.keys.toList().map((e) => int.parse(e)).toList();
     return Container(
       width: double.infinity,
       color: Colors.white,
@@ -655,6 +658,64 @@ class _TestResultPageWidgetState extends State<TestResultPageWidget> {
             ),
             const SizedBox(
               height: 40,
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 4.0),
+              child: Text('y:대역폭(Hz) , x:데시벨(db)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            ),
+            SizedBox(
+              width: double.infinity, // 너비를 전체 화면으로 설정
+              height: 250, // 높이를 400픽셀로 설정
+              child: LineChart(
+                LineChartData(
+                  minY: 0, // Y 축의 최소값 설정
+                  maxY: 100, // Y 축의 최대값 설정
+                  gridData: FlGridData(show: true),
+                  titlesData: FlTitlesData(
+                    bottomTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        reservedSize: 30,
+                        getTitlesWidget: (value, meta) {
+                          // X 축 키 값만 반환
+                          if (xKeys.contains(value.toInt())) {
+                            return Text('${value.toInt()}');
+                          }
+                          return Text('');
+                        },
+                      ),
+                    ),
+                    topTitles: AxisTitles(
+                      sideTitles: SideTitles(showTitles: false), // 상단 X 축 라벨 비활성화
+                    ),
+                    leftTitles: AxisTitles(
+                      sideTitles: SideTitles(
+                        showTitles: true,
+                        reservedSize: 30,
+                        getTitlesWidget: (value, meta) {
+                          return Text('${value.toInt()}');
+                        },
+                      ),
+                    ),
+                    rightTitles: AxisTitles(
+                      sideTitles: SideTitles(showTitles: false), // 우측 Y 축 라벨 비활성화
+                    ),
+                  ),
+
+                  lineBarsData: [
+                    LineChartBarData(
+                      spots: UIManager.getInstance().currentDiagnosis!.right.entries.map((entry) => FlSpot(double.parse(entry.key), entry.value.toDouble())).toList(),
+                      isCurved: true,
+                      color: Colors.blue,
+                    ),
+                    LineChartBarData(
+                      spots: UIManager.getInstance().currentDiagnosis!.left.entries.map((entry) => FlSpot(double.parse(entry.key), entry.value.toDouble())).toList(),
+                      isCurved: true,
+                      color: Colors.red,
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

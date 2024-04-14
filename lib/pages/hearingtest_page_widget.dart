@@ -7,6 +7,7 @@ import 'package:medi_genie/localization/strings.dart';
 import 'package:medi_genie/manager/dataManager.dart';
 import 'package:medi_genie/manager/uiManager.dart';
 import 'package:medi_genie/model/testing_model.dart';
+import 'package:scroll_date_picker/scroll_date_picker.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 import '/flutter_flow/flutter_flow_icon_button.dart';
@@ -50,6 +51,12 @@ class _HearingTestPageWidgetState extends State<HearingTestPageWidget> {
 
   List<dynamic> hm = [];
   HearingTestModel hModel = HearingTestModel();
+
+  Map<int, int> hearingTestRightResult = <int, int>{};
+  Map<int, int> hearingTestLeftResult = <int, int>{};
+  bool isRight = true;
+  int rightAverage = 0;
+  int leftAverage = 0;
 
   @override
   void initState() {
@@ -184,7 +191,7 @@ class _HearingTestPageWidgetState extends State<HearingTestPageWidget> {
                                 ? () async {
                                     audioStop();
                                     if (dm.diagnosisTestData.length == _testingIndex + 1) {
-                                      PostDiagnosisResultCall.call(DataManager.getInstance().setTempData()).then(
+                                      await PostDiagnosisResultCall.call(DataManager.getInstance().setTempData()).then(
                                         (value) => {
                                           if (value.statusCode == 200)
                                             {
@@ -211,6 +218,19 @@ class _HearingTestPageWidgetState extends State<HearingTestPageWidget> {
                                 // 오디오 검사 시작하니깐 페이지뷰를 다른걸로 써야 함. 그리고 오디오 검사가 끝나면 다음 질문으로 넘어감
                                 : (questionIndex == 1 || questionIndex == 3) & isHearingStart & (mainVolume > 0)
                                     ? () async {
+                                        int nextIndex = hModel.hearingProgress![questionIndex].audioSound![hearingAudioTestCount].frequency!;
+
+                                        if (isRight) {
+                                          hearingTestRightResult[nextIndex] = mainVolume;
+                                          UIManager.getInstance().currentDiagnosis!.setRight(frequncy: nextIndex, volume: mainVolume);
+                                          debugPrint('isRight~~~~~~~~~~nextIndex : $nextIndex');
+                                          debugPrint('isRight~~~~~~~~~~mainVolume : $mainVolume');
+                                        } else {
+                                          hearingTestLeftResult[nextIndex] = mainVolume;
+                                          UIManager.getInstance().currentDiagnosis!.setLeft(frequncy: nextIndex, volume: mainVolume);
+                                          debugPrint('~~~~~~~~~~nextIndex : $nextIndex');
+                                          debugPrint('~~~~~~~~~~mainVolume : $mainVolume');
+                                        }
                                         hearingTestEnd();
                                         if (hModel.hearingProgress![questionIndex].stepCount! > (hearingAudioTestCount + 1)) {
                                           await hearingPageController.nextPage(
@@ -218,6 +238,21 @@ class _HearingTestPageWidgetState extends State<HearingTestPageWidget> {
                                             curve: Curves.ease,
                                           );
                                         } else {
+                                          if (isRight) {
+                                            int total = 0;
+                                            for (int value in hearingTestRightResult.values) {
+                                              total += value;
+                                            }
+                                            rightAverage = total;
+                                            isRight = false;
+                                          } else {
+                                            int total = 0;
+                                            for (int value in hearingTestLeftResult.values) {
+                                              total += value;
+                                            }
+                                            leftAverage = total;
+                                            UIManager.getInstance().currentDiagnosis!.setAverage(right: rightAverage, left: leftAverage);
+                                          }
                                           hearingAudioTestCount = 0;
                                           await pageController.nextPage(
                                             duration: const Duration(milliseconds: 300),
@@ -549,25 +584,6 @@ class _HearingTestPageWidgetState extends State<HearingTestPageWidget> {
     audioPlayer.stop();
     setState(() {});
   }
-
-  //   return showDialog(
-  //     context: context,
-  //     builder: (context) => AlertDialog(
-  //       title: Text('Hearing Test'),
-  //       content: Text('Are you ready to start the hearing test?'),
-  //       actions: <Widget>[
-  //         TextButton(
-  //           onPressed: () => Navigator.pop(context, false),
-  //           child: Text('No'),
-  //         ),
-  //         TextButton(
-  //           onPressed: () => Navigator.pop(context, true),
-  //           child: Text('Yes'),
-  //         ),
-  //       ],
-  //     ),
-  //   );
-  // }
 }
 
 class HexColor extends Color {
