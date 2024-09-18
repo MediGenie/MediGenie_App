@@ -14,7 +14,7 @@ class NameInputPageWidget extends StatefulWidget {
   const NameInputPageWidget({
     super.key,
     required PageController pageController,
-  })  : pageController = pageController;
+  }) : pageController = pageController;
 
   @override
   State<NameInputPageWidget> createState() => _NameInputPageWidgetState();
@@ -66,7 +66,7 @@ class _NameInputPageWidgetState extends State<NameInputPageWidget> {
       width: MediaQuery.of(context).size.width * 0.43,
       height: 60.0,
       child: MaterialTextField(
-        autoFocus: true,
+        // autoFocus: true,
         floatingLabelBehavior: FloatingLabelBehavior.always,
         enabled: true,
         keyboardType: TextInputType.name,
@@ -97,9 +97,9 @@ class _NameInputPageWidgetState extends State<NameInputPageWidget> {
             context.read<InputUserInfo>().setLastName(lastName: value);
           }
         },
-        onFieldSubmitted: (value) async {
-          if (isFirstName) widget.pageController.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
-        },
+        // onFieldSubmitted: (value) async {
+        //   if (isFirstName) widget.pageController.nextPage(duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
+        // },
       ),
     );
   }

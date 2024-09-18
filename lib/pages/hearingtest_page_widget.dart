@@ -55,15 +55,15 @@ class _HearingTestPageWidgetState extends State<HearingTestPageWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => QuestionPageModel());
-    audioPlayer.setAudioContext(const AudioContext(
+    audioPlayer.setAudioContext(AudioContext(
       android: AudioContextAndroid(),
       iOS: AudioContextIOS(
         category: AVAudioSessionCategory.playback,
-        options: [
-          AVAudioSessionOptions.allowBluetooth,
-          AVAudioSessionOptions.allowBluetoothA2DP,
-          AVAudioSessionOptions.allowAirPlay,
-        ],
+        // options: [
+        //   AVAudioSessionOptions.allowBluetooth,
+        //   AVAudioSessionOptions.allowBluetoothA2DP,
+        //   AVAudioSessionOptions.allowAirPlay,
+        // ],
       ),
     ));
     audioPlayer.setReleaseMode(ReleaseMode.loop);
