@@ -269,7 +269,7 @@ class _AddPhotoPageWidgetState extends State<AddPhotoPageWidget> {
                                       final images = await PostImageUploadCall.call(formData);
                                       UIManager.getInstance().currentDiagnosis!.images = images;
                                       if (dm.diagnosisTestData.length == testingIndex + 1) {
-                                        PostDiagnosisResultCall.call(DataManager.getInstance().setTempData()).then(
+                                        await PostDiagnosisResultCall.call(DataManager.getInstance().setTempData()).then(
                                           (value) => {
                                             //context.pop(),
                                             context.pushNamed(

@@ -8,3 +8,6 @@ export 'pages/start_page_widget.dart' show StartPageWidget;
 export 'pages/setting_page_widget.dart' show SettingPageWidget;
 export 'pages/terms_of_service_page_widget.dart' show TermsOfServicePageWidget;
 export 'pages/question_page_widget.dart' show QuestionPageWidget;
+
+// 앱 최초 실행 여부
+const String kHasRunBeforeSPKey = "hasRunBeforeKey";

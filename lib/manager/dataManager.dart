@@ -149,8 +149,7 @@ class DataManager {
   }
 
   // 진단 json 데이터 서버에서 가져오기 - 폴더와 파일 이름에 locale 적용
-  Future<bool> dignosisDataLoading(BuildContext context, String url,
-      String department, String subject) async {
+  Future<bool> dignosisDataLoading(BuildContext context, String url, String department, String subject) async {
     bool isLoaded = false;
     String contextLocal = context.deviceLocale.toString();
     String locale = contextLocal.substring(3, 5);
@@ -162,11 +161,9 @@ class DataManager {
     diagnosisTestData.clear();
     String ageGruop, uri = '';
     if (department == 'child') {
-      ageGruop = getChildDateToAgeGruop(
-          getMemberBirth(UIManager.getInstance().currentDiagnosis!.memberId!));
+      ageGruop = getChildDateToAgeGruop(getMemberBirth(UIManager.getInstance().currentDiagnosis!.memberId!));
     } else {
-      ageGruop = getDateToAgeGruop(
-          getMemberBirth(UIManager.getInstance().currentDiagnosis!.memberId!));
+      ageGruop = getDateToAgeGruop(getMemberBirth(UIManager.getInstance().currentDiagnosis!.memberId!));
     }
     uri = '$url$locale/${subject}_${ageGruop}_$locale.json';
     logger.d('diagnosis json url: $uri');
@@ -216,8 +213,7 @@ class DataManager {
 
     data.diagnosisId = UIManager.getInstance().currentDiagnosis!.diagnosisId;
     data.earPos = UIManager.getInstance().currentDiagnosis!.earPos;
-    data.historyTakingData =
-        UIManager.getInstance().currentDiagnosis!.historyTakingData;
+    data.historyTakingData = UIManager.getInstance().currentDiagnosis!.historyTakingData;
     data.setAverage(right: 30, left: 30);
     data.setRight(frequncy: 500, volume: 30);
     data.setRight(frequncy: 1000, volume: 30);
@@ -252,10 +248,10 @@ class DataManager {
     diagosisModels.forEach(
       (key, value) {
         for (var element in value) {
-            if (element.id == id) {
-              subject = element.subject!;
-            }
+          if (element.id == id) {
+            subject = element.subject!;
           }
+        }
       },
     );
     return subject;

@@ -3,12 +3,14 @@ import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:easy_localization_loader/easy_localization_loader.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:medi_genie/backend/api_requests/api_manager.dart';
 import 'package:medi_genie/localization/strings.dart';
 import 'package:medi_genie/pages/ai_chat_page_widget.dart';
 import 'package:medi_genie/provider/input_userinfo.dart';
 import 'package:medi_genie/provider/mypage_info.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
@@ -22,6 +24,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await FlutterFlowTheme.initialize();
+
+  await clearSecureStorageOnReinstall();
 
   runApp(
     EasyLocalization(
@@ -47,6 +51,16 @@ void main() async {
       ),
     ),
   );
+}
+
+Future clearSecureStorageOnReinstall() async {
+  SharedPreferences preferences = await SharedPreferences.getInstance();
+  FlutterSecureStorage secureStorage = const FlutterSecureStorage();
+  bool isRunBefore = preferences.getBool(kHasRunBeforeSPKey) ?? false;
+  if (!isRunBefore) {
+    secureStorage.deleteAll();
+    preferences.setBool(kHasRunBeforeSPKey, true);
+  }
 }
 
 class MyApp extends StatefulWidget {
